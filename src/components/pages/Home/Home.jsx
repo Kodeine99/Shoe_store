@@ -1,10 +1,11 @@
-import { Container } from '@material-ui/core';
 import React from 'react';
+import { Container } from '@material-ui/core';
+import SectionCarousel from './sections/Carousel';
 
 function Home() {
     return (
         <Container>
-            <h1>Home Page</h1>
+            <SectionCarousel />
         </Container>
     );
 }

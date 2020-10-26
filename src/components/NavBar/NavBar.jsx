@@ -104,7 +104,7 @@ function NavBar() {
         <div className={classes.grow} />
         <nav className={classes.nav}>
             <Button variant="link" color="default" className={classes.link}
-                  component={RouterLink} to="/Home">
+                  component={RouterLink} to="/">
               Home
           </Button>
           <CustomDropdown />

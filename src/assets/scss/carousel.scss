@@ -1,0 +1,96 @@
+.carousel {
+    position: relative;
+    // border: 1px solid red;
+    width: 100%;
+    // height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    align-items: center;
+    overflow: hidden;
+    // background: black;
+    background-image: cover;
+
+}
+
+.slide {
+    // border: 1px solid blue;
+    border: none;
+    min-width: 100%;
+    // height: 80vh;
+    transition: .5s;
+    overflow: hidden;
+    background-image: cover;
+}
+//btn styles
+%btn-styles {
+    position: absolute;
+    top: 50%;
+    // left: 0;
+    transform: translateY(-50%);
+    width: 5%;
+    height: 10%;
+    outline:none;
+}
+#goLeft {
+    left: 0;
+    @extend %btn-styles;
+}
+
+#goRight {
+    right: 0;
+    @extend %btn-styles;
+}
+#goLeft:hover {
+    color: #fff;
+}
+#goRight:hover {
+    color: #fff;
+}
+%textWhite {
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -.03em;
+    line-height: 1.1;
+    margin-bottom: .2rem;
+}
+
+.intro-content {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    left: 100px;
+    font-weight: 500;
+
+    @extend %textWhite;
+}
+.intro-subtitle {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+.intro-title {
+    margin: 0 0 10px 0 ;
+}
+.intro-price {
+    font-weight: 300;
+}
+#btn {
+    min-width: 150px;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#btn span {
+    padding: 2px 0;
+}
+#btn:hover {
+    background-color: #445f84;
+    color: white;
+}
