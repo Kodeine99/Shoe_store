@@ -1,0 +1,123 @@
+.banner-item {
+    width: 100%;
+    height: auto;
+    position: relative;
+    opacity: .85;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    // border: 1px solid black;
+}
+.banner-item img {
+    width: 100%;
+    
+}
+.banner-item:hover {
+    opacity: 1;
+}
+.banner-item a {
+    // display: inline-block;
+}
+.banner1 {
+    padding: 0 8px 0 0;
+}
+.banner2 {
+    // padding-bottom: 8px;
+    padding-left: 8px;
+}
+.bannerContainer {
+    margin-top: 16px !important;
+}
+.banner-content {
+    display: inline-block;
+    position: absolute;
+    padding-top: .4rem;
+    left: 2rem;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+}
+.banner-content-right {
+    left: auto;
+    right: 25px;
+}
+.banner-content-left {
+    left: 25px;
+    right: auto;
+}
+.banner-content-bottom {
+    left: auto;
+    right: 50px;
+    bottom: 40px;
+    top: auto;
+}
+%textWhite {
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -.03em;
+    line-height: 1.1;
+    margin-bottom: .2rem;
+}
+%textBlack {
+    color: black;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -.03em;
+    line-height: 1.1;
+    margin-bottom: .2rem;
+}
+.banner-subtitle {
+    @extend %textWhite;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.banner-title.textWhite {
+    @extend %textWhite;
+    font-weight: 600;
+    margin:0 0 10px 0;
+}
+.banner-subtitle.textBlack {
+     @extend %textBlack;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.banner-title.textBlack {
+    @extend %textBlack;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+.banner-text.textWhite a {
+    text-decoration: none;
+    color: White;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+.banner-text.textBlack a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+}
+.banner-text.textWhite a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+}
+.btnBlack {
+
+}
+
+@keyframes fixedHeader {
+    0% {
+        transform: translateY(-60px);
+        opacity: 0;
+}
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+}
+}
