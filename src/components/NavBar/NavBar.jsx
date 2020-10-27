@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import CustomDropdown from './CustomDropdown';
 import "../../assets/css/NavBar.css"
@@ -28,7 +28,20 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
       // borderBottom: `1px solid ${theme.palette.divider}`,
-      marginBottom: '20px'
+    marginBottom: '20px',
+
+    
+  },
+  fixed: {
+    position: 'fixed',
+    left: '0',
+    right: '0',
+    top: "0",
+    zIndex: '1040',
+    animationName: 'fixedHeader',
+    animationDuration: '.4s',
+    backgroundColor: '#fff',
+    boxShadow: '0 3px 6px rgba(51,51,51,0.05)',
   },
   title: {
     display: 'none',
@@ -93,10 +106,23 @@ const useStyles = makeStyles((theme) => ({
 
 function NavBar() {
   const classes = useStyles();
-  
+
+  const [appBarClass, setBarClass] = useState(`${classes.appBar}`);
+  // console.log(appBarClass);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      // console.log(appBarClass);
+      if (window.scrollY > 100) {
+        setBarClass(`${classes.appBar} ${classes.fixed}`);
+      } else if (window.scrollY === 0) {
+        setBarClass(`${classes.appBar}`)
+      }
+    });
+  });
   return (
     <Container>
-    <AppBar position="static" color="inherit" elevation={0} className={classes.appBar}>
+      <AppBar id="appbar" position="static" color="inherit" elevation={0} className={appBarClass}>
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
           KdShop
