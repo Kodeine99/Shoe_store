@@ -8,7 +8,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
 
-import ArrowDropDownOutlinedIcon from '@material-ui/icons/ArrowDropDownOutlined';
+// import ArrowDropDownOutlinedIcon from '@material-ui/icons/ArrowDropDownOutlined';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -64,7 +66,7 @@ export default function MenuListComposition() {
           aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
-          endIcon={<ArrowDropDownOutlinedIcon/>}
+          endIcon={<KeyboardArrowDownIcon/>}
         >
           Shop
         </Button>

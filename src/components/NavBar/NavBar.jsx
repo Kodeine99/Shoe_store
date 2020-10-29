@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import CustomDropdown from './CustomDropdown';
-import "../../assets/css/NavBar.css"
+import "../../assets/css/NavBar.css";
 
 
 import AppBar from '@material-ui/core/AppBar';
@@ -13,7 +13,8 @@ import { Container } from '@material-ui/core';
 // import Link from '@material-ui/core/Link';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import ArrowDropDownOutlinedIcon from '@material-ui/icons/ArrowDropDownOutlined';
+// import ArrowDropDownOutlinedIcon from '@material-ui/icons/ArrowDropDownOutlined';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 
@@ -134,11 +135,11 @@ function NavBar() {
               Home
           </Button>
           <CustomDropdown />
-            <Button variant="link" color="default" className={classes.link} endIcon={<ArrowDropDownOutlinedIcon className={classes.endIcon} />}
+            <Button variant="link" color="default" className={classes.link} endIcon={<KeyboardArrowDownIcon className={classes.endIcon} />}
                   component={RouterLink} to="/Products">
             Products
           </Button>
-          <Button variant="link" color="default" className={classes.link} endIcon={< ArrowDropDownOutlinedIcon/>}
+          <Button variant="link" color="default" className={classes.link} endIcon={< KeyboardArrowDownIcon/>}
                   component={RouterLink} to="/Blogs">
             Blogs
           </Button>
