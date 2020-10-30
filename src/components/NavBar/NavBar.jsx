@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import CustomDropdown from './CustomDropdown';
 import "../../assets/css/NavBar.css";
-
+import MegaMenu from './Megamenu';
 
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
@@ -130,14 +130,15 @@ function NavBar() {
           </Typography>
         <div className={classes.grow} />
         <nav className={classes.nav}>
-            <Button variant="link" color="default" className={classes.link}
+          <Button variant="link" color="default" className={classes.link}
                   component={RouterLink} to="/">
               Home
           </Button>
           <CustomDropdown />
-            <Button variant="link" color="default" className={classes.link} endIcon={<KeyboardArrowDownIcon className={classes.endIcon} />}
-                  component={RouterLink} to="/Products">
-            Products
+          <Button id="btn-hv" variant="link" color="default" className={classes.link} endIcon={<KeyboardArrowDownIcon className={classes.endIcon} position="relative"/>}
+                component={RouterLink} to="/Products">
+                Products
+            <MegaMenu />
           </Button>
           <Button variant="link" color="default" className={classes.link} endIcon={< KeyboardArrowDownIcon/>}
                   component={RouterLink} to="/Blogs">

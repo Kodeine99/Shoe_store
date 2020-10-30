@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 import i1 from "../../../../assets/img/slides/slide-1.jpg";
-import i2 from "../../../../assets/img/slides/slide-2.jpg";
+import i2 from "../../../../assets/img/banners/Adidas/banner02.jpg";
 import i3 from "../../../../assets/img/slides/slide-3.jpg";
 import SliderIntro from './SliderIntro';
 
