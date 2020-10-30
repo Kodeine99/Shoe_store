@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import CustomDropdown from './CustomDropdown';
 import "../../assets/css/NavBar.css";
 import MegaMenu from './Megamenu';
+import MegaMenuSm from './MegaMenuSm';
+import MegamenuMin from './MegaMenuMin';
 
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
@@ -134,15 +135,25 @@ function NavBar() {
                   component={RouterLink} to="/">
               Home
           </Button>
-          <CustomDropdown />
-          <Button id="btn-hv" variant="link" color="default" className={classes.link} endIcon={<KeyboardArrowDownIcon className={classes.endIcon} position="relative"/>}
-                component={RouterLink} to="/Products">
-                Products
+          <Button id="btn-hv" variant="link" color="default" className={classes.link}
+              component={RouterLink} to="/"
+              endIcon={< KeyboardArrowDownIcon />}
+              position="relative">
+              Shop
             <MegaMenu />
           </Button>
-          <Button variant="link" color="default" className={classes.link} endIcon={< KeyboardArrowDownIcon/>}
-                  component={RouterLink} to="/Blogs">
-            Blogs
+          {/* <CustomDropdown /> */}
+          <Button id="btn-hv" variant="link" color="default" className={classes.link}   endIcon={<KeyboardArrowDownIcon className={classes.endIcon} position="relative"/>}
+                component={RouterLink} to="/Products">
+                Products
+            <MegaMenuSm />
+          </Button>
+            <Button id="btn-hv" variant="link" color="default" className={classes.link}
+              endIcon={< KeyboardArrowDownIcon />}
+              component={RouterLink} to="/Blogs"
+              position="relative">
+              Blog
+            <MegamenuMin />
           </Button>
         </nav>
         <div className={classes.search}>

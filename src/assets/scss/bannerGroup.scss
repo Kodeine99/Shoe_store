@@ -10,6 +10,7 @@
 }
 .banner-item img {
     width: 100%;
+    height: 100%;
     
 }
 .banner-item:hover {
@@ -20,10 +21,12 @@
 }
 .banner1 {
     padding: 0 8px 0 0;
+    padding-bottom:16px;
 }
 .banner2 {
-    // padding-bottom: 8px;
+    padding-bottom: 16px;
     padding-left: 8px;
+
 }
 .bannerContainer {
     margin-top: 16px !important;

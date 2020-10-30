@@ -5,9 +5,9 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import '../../../../assets/scss/bannerGroup.scss';
 import banner1 from '../../../../assets/img/banners/banner-1.jpg';
-import banner2 from '../../../../assets/img/banners/banner-2.jpg';
-import banner3 from '../../../../assets/img/banners/banner-3.jpg';
-import banner4 from '../../../../assets/img/banners/banner-4.jpg';
+import banner2 from '../../../../assets/img/banners/Adidas/banner05.jpg';
+import banner3 from '../../../../assets/img/banners/Converse/Converse-02.jpg';
+import banner4 from '../../../../assets/img/banners/Nike/banner-02.jpg';
 // import banner5 from '../../../../assets/img/banners/banner-5.jpg';
 // import banner6 from '../../../../assets/img/banners/banner-6.jpg';
 
@@ -64,17 +64,17 @@ export default function CSSGrid() {
         <Grid item xs={6} className="banner-item banner2">
           <a href="#3" className=""><img src={banner2} alt="" /></a>
           <div className="banner-content banner-content-left">
-            <h4 className="banner-subtitle textBlack">Clearance</h4>
-            <h3 className="banner-title textBlack">
+            <h4 className="banner-subtitle textWhite">Clearance</h4>
+            <h3 className="banner-title textWhite">
                 <span>Ultra Boots</span>
             </h3>
-            <div className="banner-text textBlack">
+            <div className="banner-text textWhite">
               <a href="#2.2" ><span>Up to 70% off</span></a>
             </div>
             <Button 
               id="btn"
               variant="container"
-              className={classes.buttonBlack}
+              className={classes.button}
             >
               Shop Now  
             </Button>            
