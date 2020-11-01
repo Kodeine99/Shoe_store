@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import '../../../assets/css/ProductCard.css';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
@@ -11,20 +10,9 @@ import Rating from '@material-ui/lab/Rating';
 
 import p1 from '../../../assets/img/products/product-1-1.jpg';
 
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    '& > * + *': {
-      marginTop: theme.spacing(1),
-    },
-  },
-}));
-
 function ProductCard() {
   return (
-    <div className="carousel-product" style={{width: '100%'}}>
+    <div className="carousel-product" style={{width: '100%'}} style={{margin: "0 4px"}}>
       <div className="product product-3 text-center">
         <figure className="product-media">
           <span className="product-label label-sale">40% off</span>
@@ -51,20 +39,21 @@ function ProductCard() {
         <div className="product-footer">
           <div className="ratings-container">
             <div className="ratings">
-              <Rating className="ratings-val" name="half-rating-read" defaultValue={5} precision={0.5} readOnly style={{ fontSize: "1.2rem", margin:"auto"}} />
+              <Rating className="ratings-val" name="half-rating-read" defaultValue={5} precision={0.5} readOnly style={{ fontSize: "1rem", margin:"auto"}} />
               <h3 className="ratings-text">(2 reviews)</h3>
             </div>
           </div>
           <div className="product-nav product-nav-dots">
-            <a className="active" href="#i" style={{background: "rgb(51,51,51)"}} ></a>
-            <a className="" href="#i" style={{background: "rgb(51,153,204)"}} ></a>
-            <a className="" href="#i" style={{background: "rgb(204,153,102)"}} ></a>
-            <a className="" href="#i" style={{background: "rgb(235,235,235)"}} ></a>
+            <a className="active" href="#i" style={{background: "rgb(51,51,51)"}}> </a>
+            <a className="" href="#i" style={{background: "rgb(51,153,204)"}}> </a>
+            <a className="" href="#i" style={{background: "rgb(204,153,102)"}}> </a>
+            <a className="" href="#i" style={{background: "rgb(235,235,235)"}}> </a>
           </div>
           <div className="product-action">
-              <Button
-                variant="contained"
-                color="secondary"
+            <Button
+                className="btn-product"
+                variant="outlined"
+                color="primary"
                 startIcon={<AddShoppingCartOutlinedIcon />}
               >
                 Add to cart
@@ -75,5 +64,4 @@ function ProductCard() {
     </div>
   );
 }
-
 export default ProductCard;

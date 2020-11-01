@@ -93,13 +93,13 @@ a {
 .product-label {
     position: absolute;
     z-index: 1;
-    top: 2rem;
-    left: 2rem;
+    top: 1rem;
+    left: 1.6rem;
     font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 1.6rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
     letter-spacing: -.01em;
-    padding: .5rem .9rem;
+    padding: .4rem .7rem;
     min-width: 45px;
     text-align: center;
     color: #333333;
@@ -270,16 +270,18 @@ a {
     display: flex;
     align-items: center;
     font-size: 1.3rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: .4rem;
     line-height: 1;
     white-space: nowrap;
+    margin: auto;
+    justify-content: center;
 }
 .ratings, .ratings-val {
     display: inline-flex;
     font-size: 1rem;
     letter-spacing: 0.1em;
     line-height: 1;
-    width:100%;
+    /* width:100%; */
     /* font-family: "molla"; */
 }
 .ratings-val {
@@ -294,6 +296,7 @@ a {
     color: #cccccc;
     letter-spacing: -.01em;
     margin: 0 0 0 .8rem;
+    font-size: .8rem;
 }
 /* h3.ratings-text {
     margin: 0 0 0 .8rem;
@@ -302,6 +305,8 @@ a {
     margin-bottom: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 .product-nav-dots a {
     display: inline-block;
@@ -329,11 +334,11 @@ a {
     opacity: 1;
     transform: translateY(0);
     background-color: transparent;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
     border-top: .1rem solid #ebebeb;
     border-bottom: none;
-    margin-top: 2rem;
+    margin-top: .6rem;
     transition-duration: .25s;
 }
 .product-action {
@@ -349,4 +354,12 @@ a {
     opacity: 0;
     visibility: hidden;
     transform: translateY(100%);
+}
+.product.product-3 .btn-product {
+    font-weight: 400;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+    text-transform: uppercase;
+    margin: auto;
+
 }

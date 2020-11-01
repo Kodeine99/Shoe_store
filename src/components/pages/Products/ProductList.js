@@ -1,44 +1,66 @@
 export default [
     {
-        "title": "Iphone 12 Pro Max",
-        "subtitle": "$1099",
-        "avatarUrl": "https://picsum.photos/200",
+        "title": "The North Face Back-To-Berkeley Remtlz Mesh",
+        "price": "$1299",
+        "cat1": "Adidas,",
+        "cat2": "Ultra boots",
         "imgUrl": "https://picsum.photos/200",
-        "description": "cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices",
+        "newPrice": "$99.00"
     },
     {
-        "title": "MacBook Pro 2020",
-        "subtitle": "$1299",
-        "avatarUrl": "https://picsum.photos/200",
+        "title": "The North Face Back-To-Berkeley Remtlz Mesh",
+        "price": "$1299",
+        "cat1": "Adidas,",
+        "cat2": "Ultra boots",
         "imgUrl": "https://picsum.photos/200",
-        "description": "cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices",
+        "newPrice": "$99.00"
     },
     {
-        "title": "AirPod Pro 2020",
-        "subtitle": "$499",
-        "avatarUrl": "https://picsum.photos/200",
+        "title": "The North Face Back-To-Berkeley Remtlz Mesh",
+        "price": "$1299",
+        "cat1": "Adidas,",
+        "cat2": "Ultra boots",
         "imgUrl": "https://picsum.photos/200",
-        "description": "cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices",
+        "newPrice": "$99.00"
     },
     {
-        "title": "MacBook Air 2020",
-        "subtitle": "$999",
-        "avatarUrl": "https://picsum.photos/200",
+        "title": "The North Face Back-To-Berkeley Remtlz Mesh",
+        "price": "$1299",
+        "cat1": "Adidas,",
+        "cat2": "Ultra boots",
         "imgUrl": "https://picsum.photos/200",
-        "description": "cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices",
+        "newPrice": "$99.00"
     },
     {
-        "title": "Magic Keyboard",
-        "subtitle": "$399",
-        "avatarUrl": "https://picsum.photos/200",
+        "title": "The North Face Back-To-Berkeley Remtlz Mesh",
+        "price": "$1299",
+        "cat1": "Adidas,",
+        "cat2": "Ultra boots",
         "imgUrl": "https://picsum.photos/200",
-        "description": "cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices",
+        "newPrice": "$99.00"
     },
     {
-        "title": "Iphone XR",
-        "subtitle": "$699",
-        "avatarUrl": "https://picsum.photos/200",
+        "title": "The North Face Back-To-Berkeley Remtlz Mesh",
+        "price": "$1299",
+        "cat1": "Adidas,",
+        "cat2": "Ultra boots",
         "imgUrl": "https://picsum.photos/200",
-        "description": "cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices",
-    }
-]
+        "newPrice": "$99.00"
+    },
+    {
+        "title": "The North Face Back-To-Berkeley Remtlz Mesh",
+        "price": "$1299",
+        "cat1": "Adidas,",
+        "cat2": "Ultra boots",
+        "imgUrl": "https://picsum.photos/200",
+        "newPrice": "$99.00"
+    },
+    {
+        "title": "The North Face Back-To-Berkeley Remtlz Mesh",
+        "price": "$1299",
+        "cat1": "Adidas,",
+        "cat2": "Ultra boots",
+        "imgUrl": "https://picsum.photos/200",
+        "newPrice": "$99.00"
+    },
+    ]
