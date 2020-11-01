@@ -12,7 +12,7 @@ import p1 from '../../../assets/img/products/product-1-1.jpg';
 
 function ProductCard() {
   return (
-    <div className="carousel-product" style={{width: '100%'}} style={{margin: "0 4px"}}>
+    <div className="carousel-product" style={{margin: '0 4px'}} >
       <div className="product product-3 text-center">
         <figure className="product-media">
           <span className="product-label label-sale">40% off</span>
