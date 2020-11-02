@@ -5,6 +5,7 @@ import SectionBannerGoup from './sections/BannerGroup';
 import SectionBoxes from './sections/Boxes';
 import SectionNewArrivals from './sections/NewArrivals';
 import SectionCategory from './sections/Category';
+import TopSelling from './sections/TopSelling';
 
 function Home() {
     return (
@@ -14,6 +15,7 @@ function Home() {
             <SectionBoxes />
             <SectionNewArrivals />
             <SectionCategory />
+            <TopSelling />
         </Container>
     );
 }

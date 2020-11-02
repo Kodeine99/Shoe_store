@@ -8,7 +8,7 @@ import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutline
 
 import Rating from '@material-ui/lab/Rating';
 
-import p1 from '../../../assets/img/products/product-1-1.jpg';
+import p1 from '../../../assets/img/products/nike/nikeproduct-1-1.jpg';
 
 function ProductCard() {
   return (
@@ -25,15 +25,15 @@ function ProductCard() {
         </figure>
         <div className="product-body">
           <div className="product-cat">
-            <span className="mr-0"><a href="#i1.1">Adidas, </a></span>
-            <span className="mr-0"><a href="#i1.2">Ultra Boots</a></span>
+            <span className="mr-0"><a href="#i1.1">Nike, </a></span>
+            <span className="mr-0"><a href="#i1.2">Joran</a></span>
           </div>
           <h3 className="product-title">
-            <a href="#product-title">The North Face Back-To-Berkeley Remtlz Mesh</a>
+            <a href="#product-title">Jordan Zoom '92</a>
           </h3>
           <div className="product-price">
-            <span className="new-price">$50.00</span>
-            <span className="old-price">$80.00</span>
+            <span className="new-price">$99.00</span>
+            <span className="old-price">$129.00</span>
           </div>
         </div>
         <div className="product-footer">

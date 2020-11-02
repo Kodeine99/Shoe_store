@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import '../../../../assets/css/Category.css';
 
-import banner5 from '../../../../assets/img/banners/banner-5.jpg';
-import banner6 from '../../../../assets/img/banners/banner-6.jpg';
-import banner7 from '../../../../assets/img/banners/banner-7.jpg';
+import banner5 from '../../../../assets/img/banners/bannerWomens.jpg';
+import banner6 from '../../../../assets/img/banners/bannerMens.jpg';
+import banner7 from '../../../../assets/img/banners/bannerKids.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 function Category() {
   const classes = useStyles();
   return (
-    <div className={classes.root} style={{marginTop: "50px", marginBottom: "50px"}}>
+    <div className={classes.root} style={{paddingTop: "50px", paddingBottom: "50px"}}>
       <Grid container spacing={3}>
         <Grid item xs>
           <div className="banner banner-cat">

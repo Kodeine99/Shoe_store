@@ -3,11 +3,10 @@
     margin-bottom: 1rem;
 }
 .NewArrivals {
-    background-color: #F8F8F8;
+    background-color: #f8f8f869;
     padding: 50px 24px;
-    
-
 }
 .slick-arrow:before {
     color: black !important;    
 }
+

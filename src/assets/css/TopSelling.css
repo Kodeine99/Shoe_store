@@ -1,0 +1,28 @@
+
+.more-product {
+    display: flex;
+    align-items: center;
+    margin: 40px auto;
+    justify-content:center;
+}
+#btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: .6rem 1rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: -.01em;
+    min-width: 170px;
+    white-space: normal;
+    transition: all 0.3s;
+    border-radius: 20px;
+}
+#btn:hover {
+    color: #445f84;
+    background-color: #f5f6f9;
+    border-color: #ebebeb;
+    box-shadow: none;
+}
