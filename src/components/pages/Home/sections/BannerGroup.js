@@ -83,15 +83,15 @@ export default function CSSGrid() {
         <Grid item xs={12} className="banner-item">
           <a href="#5" className=""><img src={banner3} alt="" /></a>
           <div className="banner-content">
-            <h4 className="banner-subtitle White">On Sale</h4>
+            <h4 className="banner-subtitle textWhite">On Sale</h4>
             <h3 className="banner-title textWhite">
-                <span>Slip-On Loafers</span>
+                <span>Converse</span>
             </h3>
             <div className="banner-text textWhite">
               <a href="#2.2"><span>Up to 30% off</span></a>
             </div>
             <Button 
-              id="btn"
+              id="btn-more"
               variant="container"
               className={classes.button}
             >

@@ -5,7 +5,7 @@
     margin: 40px auto;
     justify-content:center;
 }
-#btn {
+#btn-more {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
     transition: all 0.3s;
     border-radius: 20px;
 }
-#btn:hover {
+#btn-more:hover {
     color: #445f84;
     background-color: #f5f6f9;
     border-color: #ebebeb;
