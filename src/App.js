@@ -12,7 +12,7 @@ import NavBar from './components/NavBar/NavBar';
 
 import 'fontsource-inter';
 // import Typography from '@material-ui/core/Typography';
-import ProductsContainer from './components/pages/Products/ProductsContainer';
+// import ProductsContainer from './components/pages/Products/ProductsContainer';
 import {Grid} from '@material-ui/core'
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/About" exact component={About} />
-        <Route path="/Products" exact component={ProductsContainer} />
+        {/* <Route path="/Products" exact component={ProductsContainer} /> */}
       </Switch> 
     </Router>
   )

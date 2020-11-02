@@ -4,6 +4,7 @@ import SectionCarousel from './sections/Carousel';
 import SectionBannerGoup from './sections/BannerGroup';
 import SectionBoxes from './sections/Boxes';
 import SectionNewArrivals from './sections/NewArrivals';
+import SectionCategory from './sections/Category';
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
             <SectionBannerGoup />
             <SectionBoxes />
             <SectionNewArrivals />
+            <SectionCategory />
         </Container>
     );
 }
