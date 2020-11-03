@@ -82,7 +82,7 @@ export default function TopSelling() {
           id="btn-more"
           endIcon={< ArrowForwardIcon className="arrow-icon"/>}
         >
-          More Products 
+          View More Products 
         </Button>
       </div>
     </div>

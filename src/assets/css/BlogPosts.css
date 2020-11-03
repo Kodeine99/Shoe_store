@@ -1,0 +1,13 @@
+.BlogPosts{
+    /* margin-bottom: 50px; */
+    padding: 50px 0;
+}
+.btn-share-icon:hover span {
+    color: #1CC0A0;
+}
+.more-articles {
+    display: flex;
+    align-items: center;
+    margin: 30px auto;
+    justify-content:center;
+}
