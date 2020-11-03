@@ -6,6 +6,7 @@ import SectionBoxes from './sections/Boxes';
 import SectionNewArrivals from './sections/NewArrivals';
 import SectionCategory from './sections/Category';
 import TopSelling from './sections/TopSelling';
+import SectionDeals from './sections/Deals';
 
 function Home() {
     return (
@@ -16,6 +17,7 @@ function Home() {
             <SectionNewArrivals />
             <SectionCategory />
             <TopSelling />
+            <SectionDeals />
         </Container>
     );
 }

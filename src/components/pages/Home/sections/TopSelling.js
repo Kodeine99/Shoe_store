@@ -79,8 +79,7 @@ export default function TopSelling() {
       <div className="more-product">
         <Button
           variant="outlined"
-          id="btn"
-          className="btn-more"
+          id="btn-more"
           endIcon={< ArrowForwardIcon className="arrow-icon"/>}
         >
           More Products 
