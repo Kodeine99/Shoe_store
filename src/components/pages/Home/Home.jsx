@@ -8,9 +8,11 @@ import SectionCategory from './sections/Category';
 import SectionTopSelling from './sections/TopSelling';
 import SectionDeals from './sections/Deals';
 import SectionBlogPosts from './sections/BlogPosts';
+import SectionSubscribe from './sections/Subscribe';
 
 function Home() {
     return (
+        <>
         <Container>
             <SectionCarousel />
             <SectionBannerGoup />
@@ -21,6 +23,12 @@ function Home() {
             <SectionDeals />
             <SectionBlogPosts />
         </Container>
+        <SectionSubscribe>
+            <Container>
+                    
+            </Container>
+        </SectionSubscribe>
+        </>
     );
 }
 

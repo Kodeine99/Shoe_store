@@ -1,0 +1,36 @@
+.subscribe-box.box-bg-img {
+   background-image: url(../img/backgrounds/bg-3.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+}
+.box-bg-img {
+    background-color: #f5f5f5;
+    padding: 2rem 4rem 2rem;
+}
+.textBlack {
+    color: Black;
+}
+.subscribe-heading {
+    margin-bottom: 20px;
+}
+.subscribe-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: -.03em;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.subscribe-desc {
+    font-size: 1rem;
+    font-weight: 400;
+}
+.font-weight-bold {
+    font-weight: bold;
+}
+.subscribe-form {
+    display: flex;
+    justify-content:center;
+}

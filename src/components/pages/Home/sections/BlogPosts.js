@@ -21,7 +21,7 @@ export default function BlogPosts() {
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
-    arrows: true,
+    arrows: false,
     centerPadding:'50px',
     responsive: [
       {
