@@ -9,6 +9,7 @@ import SectionTopSelling from './sections/TopSelling';
 import SectionDeals from './sections/Deals';
 import SectionBlogPosts from './sections/BlogPosts';
 import SectionSubscribe from './sections/Subscribe';
+import Footer from '../../Footer/Footer';
 
 function Home() {
     return (
@@ -24,6 +25,7 @@ function Home() {
             <SectionBlogPosts />
         </Container>
         <SectionSubscribe />
+        <Footer />    
         </>
     );
 }
