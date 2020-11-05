@@ -23,11 +23,7 @@ function Home() {
             <SectionDeals />
             <SectionBlogPosts />
         </Container>
-        <SectionSubscribe>
-            <Container>
-                    
-            </Container>
-        </SectionSubscribe>
+        <SectionSubscribe />
         </>
     );
 }
