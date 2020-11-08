@@ -45,7 +45,7 @@ function Footer() {
                 </Typography>
                 <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. </p>
                 <div className="social-icons">
-                  <IconButton href="#" color="secondary">
+                  <IconButton href="#" color="secondary" className="pdl-0">
                     <FacebookIcon />
                   </IconButton>
                   <IconButton href="#" color="secondary">
