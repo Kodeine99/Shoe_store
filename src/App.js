@@ -14,6 +14,7 @@ import 'fontsource-inter';
 // import Typography from '@material-ui/core/Typography';
 // import ProductsContainer from './components/pages/Products/ProductsContainer';
 import {Grid} from '@material-ui/core'
+import ScrollArrow from './components/ScrollArrow/ScrollArrow';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <HeaderTop />
           <NavBar />
         </Grid>
+        <ScrollArrow />
       </Grid>
       <Switch>
         <Route path="/" exact component={Home} />
