@@ -12,7 +12,7 @@ import { Container } from '@material-ui/core';
 import ArrowDropDownOutlinedIcon from '@material-ui/icons/ArrowDropDownOutlined';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
-
+import LoginModal from '../Modal/LoginModal';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -50,6 +50,16 @@ const useStyles = makeStyles((theme) => ({
 function NavBar() {
   const classes = useStyles();
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Container>
       <AppBar position="static" color="inherit" elevation={0} className={classes.appBar}>
@@ -70,11 +80,19 @@ function NavBar() {
             Contact Us
           </Button>
           </nav>
-          <Button href="#" color="primary" variant="link" className={classes.smallLink} startIcon={<AccountCircleIcon />}>
+          <Button
+            href="#"
+            color="primary"
+            variant="link"
+            className={classes.smallLink}
+            startIcon={<AccountCircleIcon />}
+            onClick= {() => handleOpen()}
+          >
             Login
           </Button>
         </Toolbar>
       </AppBar>
+      <LoginModal open={ open } handleClose={ handleClose }/>
     </Container>
   );
 }
