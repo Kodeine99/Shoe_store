@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import "../../../../assets/scss/carousel.scss";
+import "../../../assets/scss/carousel.scss";
 import IconButton from '@material-ui/core/IconButton';
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
-import i1 from "../../../../assets/img/banners/Adidas/banner04.jpg";
-import i2 from "../../../../assets/img/banners/Converse/Converse-01.jpg";
-import i3 from "../../../../assets/img/banners/Nike/banner-01.jpg";
+import i1 from "../../../assets/img/banners/Adidas/banner04.jpg";
+import i2 from "../../../assets/img/banners/Converse/Converse-01.jpg";
+import i3 from "../../../assets/img/banners/Nike/banner-01.jpg";
 import SliderIntro from './SliderIntro';
 
 

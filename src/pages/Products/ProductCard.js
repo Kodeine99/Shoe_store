@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../assets/css/ProductCard.css';
+import '../../assets/css/ProductCard.css';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 
@@ -8,7 +8,7 @@ import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutline
 
 import Rating from '@material-ui/lab/Rating';
 
-import p1 from '../../../assets/img/products/nike/nikeproduct-1-1.jpg';
+import p1 from '../../assets/img/products/nike/nikeproduct-1-1.jpg';
 
 function ProductCard() {
   return (

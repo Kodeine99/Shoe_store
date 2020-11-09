@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
-import '../../../../assets/css/Subscribe.css';
+import '../../../assets/css/Subscribe.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {

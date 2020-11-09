@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../assets/css/Boxes.css';
+import '../../../assets/css/Boxes.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 

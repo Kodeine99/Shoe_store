@@ -1,11 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import '../../../../assets/css/Category.css';
+import '../../../assets/css/Category.css';
 
-import banner5 from '../../../../assets/img/banners/bannerWomens.jpg';
-import banner6 from '../../../../assets/img/banners/bannerMens.jpg';
-import banner7 from '../../../../assets/img/banners/bannerKids.jpg';
+import banner5 from '../../../assets/img/banners/bannerWomens.jpg';
+import banner6 from '../../../assets/img/banners/bannerMens.jpg';
+import banner7 from '../../../assets/img/banners/bannerKids.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {

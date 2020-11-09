@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../assets/css/BlogPosts.css';
+import '../../../assets/css/BlogPosts.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -9,7 +9,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 
 // import ProductCard from "../../Products/ProductCard";
-import BlogCard from "../../../Card/BlogCard";
+import BlogCard from "../../../components/Card/BlogCard";
 
 
 export default function BlogPosts() {

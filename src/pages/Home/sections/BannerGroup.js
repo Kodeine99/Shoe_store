@@ -3,11 +3,11 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import '../../../../assets/scss/bannerGroup.scss';
-import banner1 from '../../../../assets/img/banners/banner-1.jpg';
-import banner2 from '../../../../assets/img/banners/Adidas/banner05.jpg';
-import banner3 from '../../../../assets/img/banners/Converse/Converse-02.jpg';
-import banner4 from '../../../../assets/img/banners/Nike/banner-02.jpg';
+import '../../../assets/scss/bannerGroup.scss';
+import banner1 from '../../../assets/img/banners/banner-1.jpg';
+import banner2 from '../../../assets/img/banners/Adidas/banner05.jpg';
+import banner3 from '../../../assets/img/banners/Converse/Converse-02.jpg';
+import banner4 from '../../../assets/img/banners/Nike/banner-02.jpg';
 // import banner5 from '../../../../assets/img/banners/banner-5.jpg';
 // import banner6 from '../../../../assets/img/banners/banner-6.jpg';
 

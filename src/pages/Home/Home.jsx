@@ -9,7 +9,7 @@ import SectionTopSelling from './sections/TopSelling';
 import SectionDeals from './sections/Deals';
 import SectionBlogPosts from './sections/BlogPosts';
 import SectionSubscribe from './sections/Subscribe';
-import Footer from '../../Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 
 function Home() {
     return (

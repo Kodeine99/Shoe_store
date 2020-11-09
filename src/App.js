@@ -4,8 +4,8 @@ import './App.css';
 import { MemoryRouter as Router } from 'react-router';
 import { Switch, Route } from 'react-router-dom';
 
-import About from './components/pages/About/AboutUs';
-import Home from './components/pages/Home/Home';
+import About from './pages/About/AboutUs';
+import Home from './pages/Home/Home';
 
 import HeaderTop from './components/Header/headerTop';
 import NavBar from './components/NavBar/NavBar';
