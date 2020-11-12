@@ -8,7 +8,7 @@ import Tab from '@material-ui/core/Tab';
 
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
-import ProductCard from '../../Products/ProductCard';
+import ProductCard from '../../../components/Card/ProductCard';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,0 +1,110 @@
+.page-header {
+    background-image: url(../../assets//img//backgrounds//page-header-bg.jpg);
+    padding: 3rem 0 3rem;
+    background-color: #ebebeb;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.page-header h1 {
+    color: #333;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: -.025em;
+    margin-bottom: 0;
+}
+.page-title {
+    font-size: 3rem;
+}
+.page-header h1 span {
+    color: #445f84;
+    display: block;
+    font-size: 1.6rem;
+    margin-top: .8rem;
+}
+.page-content .sidebar-shop {
+    display: block;
+}
+.sidebar-shop .widget {
+    color: #333;
+    margin: 0 0 2rem;
+    border-bottom: .1rem solid #ebebeb;
+}
+.widget-clean {
+    display: flex;
+    align-items: center;
+    padding-top: .2rem;
+    padding-bottom: 1.6rem;
+}
+.widget-clean label {
+    color: inherit;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: -.01em;
+    margin: 0;
+}
+
+
+
+
+.breadcrumb-nav {
+    margin-bottom: 1.4rem !important;
+    border-bottom: 0.1rem solid rgba(235,235,235,0.55);
+}
+.breadcrumb-nav .breadcrumb-container {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+.breadcrumb-icon {
+    font-size: 1.2rem;
+}
+
+.tool-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.tool-box-left, .tool-box-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tool-box-info {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+.tool-box-info span {
+    color: #333;
+}
+.pagination-container {
+    border-radius: 0;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin: 1.6rem;
+}
+.sidebar-shop .widget-collapsible {
+    overflow: hidden;
+}
+.sidebar-shop .widget-title {
+    color: #333;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    margin-bottom: .7rem;
+}
+.widget-collapsible .widget-title a {
+    position: relative;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding-right: 3rem;
+    font-size: 1.4rem;
+}

@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import About from './pages/About/AboutUs';
 import Home from './pages/Home/Home';
+import Products from './pages/Products/Products';
 
 import HeaderTop from './components/Header/headerTop';
 import NavBar from './components/NavBar/NavBar';
@@ -31,6 +32,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/About" exact component={About} />
+        <Route path="/Products" exact component={Products} />
         {/* <Route path="/Products" exact component={ProductsContainer} /> */}
       </Switch> 
     </Router>
