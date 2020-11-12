@@ -8,7 +8,7 @@ import Link from '@material-ui/core/Link';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 
-import './LoginForm.css';
+import './SignInUpForm.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -68,8 +68,11 @@ function LoginForm() {
         </Button>
         <FormControlLabel
           className={classes.FormControlLabel}
-          control={<Checkbox checked={state.checked} onChange={handleChange} name="checked"
-        />}
+          control={<Checkbox 
+            checked={state.checked} 
+            onChange={handleChange} 
+            name="checked"
+          />}
           label="Remember Me"
         />
         <Link className={classes.Link } href="#" onClick={preventDefault} color="inherit">

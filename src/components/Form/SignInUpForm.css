@@ -1,0 +1,14 @@
+.more-signin {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    border: 1px solid #ccc !important;
+    margin: 10px !important;
+}
+.form-footer {
+    padding-top: .6rem;
+    padding-bottom: 2rem;
+    border-bottom: .1rem solid #ebebeb;
+    margin-bottom: 2rem;
+}

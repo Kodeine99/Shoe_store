@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import LoginForm from '../Form/LoginForm';
+import RegisterForm from '../Form/RegisterForm';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    },
+  },
 }));
 
 function TabPanel(props) {
@@ -113,7 +114,7 @@ function LoginModal(props) {
                 <LoginForm />
               </TabPanel>
               <TabPanel value={value} index={1} dir={theme.direction}>
-                Item Two
+                <RegisterForm />
               </TabPanel>
             </SwipeableViews>
           </div>
