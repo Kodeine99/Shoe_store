@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { DataContext } from '../../contexts/DataProvider';
+
 import { Button, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -129,6 +131,8 @@ function valuetext(value) {
 
 function Products() {
   const classes = useStyles();
+  const [products, setProducts] = useContext(DataContext);
+  // console.log(products)
 
   return (
     <div className="products-page">
@@ -295,33 +299,21 @@ function Products() {
                 </div>
                 <div className="products">
                   <Grid container spacing={2}>
-                    <Grid item xs={4}>
-                      <ProductCard2 />
-                    </Grid>
-                    <Grid item xs={4}>
-                      <ProductCard2 />
-                    </Grid>
-                    <Grid item xs={4}>
-                      <ProductCard2 />
-                    </Grid>
-                    <Grid item xs={4}>
-                      <ProductCard2 />
-                    </Grid>
-                    <Grid item xs={4}>
-                      <ProductCard2 />
-                    </Grid>
-                    <Grid item xs={4}>
-                      <ProductCard2 />
-                    </Grid>
-                    <Grid item xs={4}>
-                      <ProductCard2 />
-                    </Grid>
-                    <Grid item xs={4}>
-                      <ProductCard2 />
-                    </Grid>
-                    <Grid item xs={4}>
-                      <ProductCard2 />
-                    </Grid>
+                    {
+                      products.map(product => (
+                        <Grid key={product._id} item xs={4}>
+                          <ProductCard2
+                            productId={product._id}
+                            title={product.title}
+                            src={ `${process.env.PUBLIC_URL}${product.images[0]}`}
+                            price={product.price}
+                            oldPrice={product.oldPrice}
+                            cont1={product.contents[0]}
+                            cont2={product.contents[1]}
+                          />
+                        </Grid>
+                      ))
+                    }
                   </Grid>
                 </div>
                 <div className="pagination-container">

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { DataProvider } from './contexts/DataProvider';
 
 import { MemoryRouter as Router } from 'react-router';
 import { Switch, Route } from 'react-router-dom';
@@ -7,6 +8,7 @@ import { Switch, Route } from 'react-router-dom';
 import About from './pages/About/AboutUs';
 import Home from './pages/Home/Home';
 import Products from './pages/Products/Products';
+import ProductDetails from './pages/Products/ProductDetails';
 
 import HeaderTop from './components/Header/headerTop';
 import NavBar from './components/NavBar/NavBar';
@@ -20,22 +22,25 @@ import LoginModal from './components/Modal/LoginModal'
 
 function App() {
   return (
-    <Router>
-      <Grid container direction="column">
-        <Grid item>
-          <HeaderTop />
-          <NavBar />
-          <LoginModal />
+    <DataProvider>
+      <Router>
+        <Grid container direction="column">
+          <Grid item>
+            <HeaderTop />
+            <NavBar />
+            <LoginModal />
+          </Grid>
+          <ScrollArrow />
         </Grid>
-        <ScrollArrow />
-      </Grid>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/About" exact component={About} />
-        <Route path="/Products" exact component={Products} />
-        {/* <Route path="/Products" exact component={ProductsContainer} /> */}
-      </Switch> 
-    </Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/About" exact component={About} />
+          <Route path="/Products" exact component={Products} />
+          <Route path="/Products/:id" exact component={ProductDetails} />
+          {/* <Route path="/Products" exact component={ProductsContainer} /> */}
+        </Switch> 
+      </Router>
+    </DataProvider>
   )
 }
 

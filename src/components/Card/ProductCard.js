@@ -8,7 +8,7 @@ import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutline
 
 import Rating from '@material-ui/lab/Rating';
 
-import p1 from '../../assets/img/products/nike/nikeproduct-1-1.jpg';
+import p1 from '../../assets/img/products/nike/product-1-1.jpg';
 
 function ProductCard() {
   return (
