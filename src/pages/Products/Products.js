@@ -172,13 +172,13 @@ function Products() {
                     <Accordion defaultExpanded={true}>
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
-                        aria-controls="brandPanel-content"
-                        id="brandPanel-header"
+                        aria-controls="brandpanel-content"
+                        id="brandpanel-header"
                       >
                         <Typography className={classes.heading}>Brand</Typography>
                       </AccordionSummary>
                       <AccordionDetails>
-                        <FormControl component="brandSet" className={classes.formControl}>
+                        <FormControl component="brand-set" className={classes.formControl}>
                           <FormGroup>
                             <FormControlLabel
                               control={<Checkbox name="nike" />}
@@ -205,13 +205,13 @@ function Products() {
                     <Accordion defaultExpanded={true}>
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
-                        aria-controls="sizePanel-content"
-                        id="sizePanel-header"
+                        aria-controls="sizepanel-content"
+                        id="sizepanel-header"
                       >
                         <Typography  className={classes.heading}>Size</Typography>
                       </AccordionSummary>
                       <AccordionDetails>
-                        <FormControl component="sizeSet" className={classes.formControl}>
+                        <FormControl component="size-set" className={classes.formControl}>
                           <FormGroup>
                             <FormControlLabel
                               control={<Checkbox name="xs" />}
@@ -246,19 +246,19 @@ function Products() {
                     <Accordion defaultExpanded={true}>
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
-                        aria-controls="pricePanel-content"
-                        id="pricePanel-header"
+                        aria-controls="pricepanel-content"
+                        id="pricepanel-header"
                       >
                         <Typography className={classes.heading}>Price</Typography>
                       </AccordionSummary>
                       <AccordionDetails>
-                        <Typography id="discrete-slider-custom" gutterBottom>
+                        <Typography id="price-set" gutterBottom>
                           Price Range: $0 - $1000
                         </Typography>
                         <Slider
                           defaultValue={50}
                           getAriaValueText={valuetext}
-                          aria-labelledby="discrete-slider-custom"
+                          aria-labelledby="price-set"
                           step={5}
                           // valueLabelDisplay={valuetext}
                           marks={prices}
