@@ -5,23 +5,32 @@ import MegaMenu from "./Megamenu";
 // import MegaMenuSm from './MegaMenuSm';
 import MegamenuMin from "./MegaMenuMin";
 
+import { withStyles } from '@material-ui/core/styles';
+import { fade, makeStyles } from "@material-ui/core/styles";
+import { Container, IconButton } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { Container, IconButton } from "@material-ui/core";
+import Badge from '@material-ui/core/Badge';
 
-// import Link from '@material-ui/core/Link';
-import { fade, makeStyles } from "@material-ui/core/styles";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import ClearIcon from "@material-ui/icons/Clear";
-// import ArrowDropDownOutlinedIcon from '@material-ui/icons/ArrowDropDownOutlined';
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 
 import product1 from "../../assets/img/products/nike/product-1-1.jpg";
+
+const StyledBadge = withStyles((theme) => ({
+  badge: {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: '0 4px',
+  },
+}))(Badge);
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -32,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    // borderBottom: `1px solid ${theme.palette.divider}`,
     marginBottom: "20px",
   },
   fixed: {
@@ -165,12 +173,6 @@ function NavBar() {
               Products
               <MegaMenu />
             </Button>
-            {/* <CustomDropdown /> */}
-            {/* <Button id="btn-hv" variant="link" color="default" className={classes.link}   endIcon={<KeyboardArrowDownIcon className={classes.endIcon} position="relative"/>}
-                component={RouterLink} to="/Products">
-                Products
-            <MegaMenuSm />
-          </Button> */}
             <Button
               id="btn-hv"
               variant="link"
@@ -199,9 +201,10 @@ function NavBar() {
             />
           </div>
           <div className="cart-dropdown">
-            <IconButton className="cart-icon dropdown-toggle">
-              <ShoppingCartIcon />
-              <span className="cart-count">0</span>
+            <IconButton aria-label="cart">
+              <StyledBadge badgeContent={0} color="secondary">
+                <ShoppingCartIcon />
+              </StyledBadge>
             </IconButton>
             <div className="cart-dropdown-menu text-center dropdown-right">
               {/* <p>No products in the cart</p> */}

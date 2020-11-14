@@ -218,28 +218,28 @@ function Products() {
                         <FormControl component="size-set" className={classes.formControl}>
                           <FormGroup>
                             <FormControlLabel
-                              control={<Checkbox name="xs" />}
-                              label="XS"
+                              control={<Checkbox name="37" />}
+                              label="37"
                             />
                             <FormControlLabel
-                              control={<Checkbox name="s" />}
-                              label="S"
+                              control={<Checkbox name="38" />}
+                              label="38"
                             />
                             <FormControlLabel
-                              control={<Checkbox name="m" />}
-                              label="M"
+                              control={<Checkbox name="39" />}
+                              label="39"
                             />
                             <FormControlLabel
-                              control={<Checkbox name="l" />}
-                              label="L"
+                              control={<Checkbox name="40" />}
+                              label="40"
                             />
                             <FormControlLabel
-                              control={<Checkbox name="xl" />}
-                              label="XL"
+                              control={<Checkbox name="41" />}
+                              label="41"
                             />
                             <FormControlLabel
-                              control={<Checkbox name="xxl" />}
-                              label="XXL"
+                              control={<Checkbox name="42" />}
+                              label="42"
                             />
                           </FormGroup>
                         </FormControl>

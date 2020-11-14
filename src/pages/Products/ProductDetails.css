@@ -1,0 +1,117 @@
+
+.details-page-top {
+    margin-bottom: 1rem;
+}
+.product-gallery {
+    display: flex;
+}
+
+.product-gallery-item:hover {
+    cursor: pointer;
+
+}
+.product-gallery-item img {
+    width : 100px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.product-gallery-item:not(:first-child) img {
+    margin: 10px 10px 0 10px;
+}
+.product-main-img {
+    position: relative;
+    margin-bottom: .4rem;
+    width: 100%;
+}
+.product-main-img img {
+    visibility: visible;
+    width: 100%;
+    display: block;
+}
+.product-main-img:hover img{
+    cursor: zoom-in;
+    background-size: 150%;
+    /* border: 1px solid #ddd; */
+}
+.img-style {
+    position: absolute;
+    box-sizing: border-box;
+    pointer-events: none;
+    width: 450px;
+    height: 450px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.img-style>img{
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    top: 0;
+    left: 0;
+    transform: translate(-706px - 398px);
+    z-index: 1;
+    visibility: hidden;
+    width:auto;
+}
+.product-img-gallery-col {
+    display: inline-block;
+    display: inline-block;
+    width: auto;
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 5px;
+}
+.ratings-container {
+    justify-content:left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    line-height: 1;
+    white-space: nowrap;
+    font-size: 0;
+}
+.ratings-text {
+    font-size: 1rem;
+    display: block;
+    margin: auto 0;
+    color: #cccccc;
+    letter-spacing: -.01em;
+    margin-left: .4rem;
+}
+.product-details label {
+    display: inline-block;
+    width: 70px;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.product-details-price {
+    margin-bottom:.6rem !important;
+}
+.product-details-desc {
+    margin-bottom: 1rem !important;
+}
+.product-details-sizes {
+    margin-bottom: .6rem;
+}
+.product-details-sizes .product-size-btn {
+    margin: .2rem .4rem .6rem 0;
+}
+.product-size-label {
+    margin-right: .6rem;
+}
+.product-quantity-label {
+    margin-right: .6rem;
+}
+.product-quantity-input {
+    max-width: 100px;
+}
+.product-quantity-input input {
+    text-align: center ;
+}
+.product-details-action {
+    margin-top: 1.6 rem;
+}

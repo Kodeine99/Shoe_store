@@ -48,7 +48,7 @@ function ProductCard2(props) {
                 startIcon={<AddShoppingCartOutlinedIcon />}
               >
                 Add to cart
-              </Button>
+            </Button>
           </div>
         </div> 
       </div>
