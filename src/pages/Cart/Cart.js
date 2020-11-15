@@ -1,10 +1,12 @@
+
 import React from 'react';
+import { Container } from '@material-ui/core';
 
 function Cart(props) {
   return (
-    <div>
+    <Container>
       Cart page
-    </div>
+    </Container>
   );
 }
 

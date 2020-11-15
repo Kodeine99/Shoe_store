@@ -131,8 +131,11 @@ function valuetext(value) {
 
 function Products() {
   const classes = useStyles();
-  const [products] = useContext(DataContext);
+  
+  const value = useContext(DataContext);
+  const [products] = value.products;
   // console.log(products)
+  const addCart = value.addCart;
 
   return (
     <div className="products-page">
@@ -303,6 +306,7 @@ function Products() {
                       products.map(product => (
                         <Grid key={product._id} item xs={4}>
                           <ProductCard2
+                            addCart={() =>addCart(product._id)}
                             productId={product._id}
                             title={product.title}
                             src={ `${process.env.PUBLIC_URL}${product.images[0]}`}

@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { DataContext } from '../../../contexts/DataProvider';
+import { Link as RouterLink } from "react-router-dom";
+
 
 
 import './ProductDetails.css';
@@ -28,9 +30,12 @@ import ProductDetailsTab from './ProductDetailsTab';
 
 function ProductDetails() {
   const { id } = useParams();
-  const [products] = useContext(DataContext); 
+  const value = useContext(DataContext);
+  const [products] = value.products;
+  const addCart = value.addCart;
   const [count, setCount] = useState(1);
   const [index, setIndex] = useState(0);
+  
   
   const details = products.filter((product, index) => {
     return product._id === id;
@@ -139,6 +144,9 @@ function ProductDetails() {
                         </div>
                         <div className="product-details-action">
                           <Button
+                            component={RouterLink}
+                            to="/Cart"
+                            onClick={() =>addCart(product._id)}
                             size="large"
                             className="addToCart-btn"
                             variant="outlined"

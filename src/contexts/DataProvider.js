@@ -1,4 +1,4 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 
 export const DataContext = createContext();
 
@@ -142,8 +142,42 @@ export const DataProvider = (props) => {
     },
   ]);
 
+  const [cart, setCart] = useState([]);
+
+  const addCart = (id) => {
+    const check = cart.every(item => {
+      return item._id !== id
+    })
+    if (check) {
+      const data = products.filter(product => {
+        return product._id === id
+      })
+      setCart([...cart, ...data])
+    } else {
+      alert("Product has been added to cart");
+    }
+  }
+
+  // dung localStorage de luu products co trong Cart
+  useEffect(() => {
+    const dataCart = JSON.parse(localStorage.getItem('dataCart'))
+    if (dataCart) {
+      setCart(dataCart);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('dataCart', JSON.stringify(cart));
+  }, [cart]);
+
+  const value = {
+    products: [products, setProducts],
+    cart: [cart, setCart],
+    addCart: addCart
+  }
+
   return (
-    <DataContext.Provider value={[products, setProducts]}>
+    <DataContext.Provider value={value}>
       {props.children}
     </DataContext.Provider>
   );

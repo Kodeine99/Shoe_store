@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import "../../assets/css/NavBar.css";
 import MegaMenu from "./Megamenu";
 // import MegaMenuSm from './MegaMenuSm';
 import MegamenuMin from "./MegaMenuMin";
+import { DataContext } from '../../contexts/DataProvider';
 
 import { withStyles } from '@material-ui/core/styles';
 import { fade, makeStyles } from "@material-ui/core/styles";
@@ -117,6 +118,8 @@ const useStyles = makeStyles((theme) => ({
 
 function NavBar() {
   const classes = useStyles();
+  const value = useContext(DataContext);
+  const [cart] = value.cart;
 
   const [appBarClass, setBarClass] = useState(`${classes.appBar}`);
   // console.log(appBarClass);
@@ -152,7 +155,6 @@ function NavBar() {
           <div className={classes.grow} />
           <nav className={classes.nav}>
             <Button
-              variant="link"
               color="default"
               className={classes.link}
               component={RouterLink}
@@ -162,7 +164,6 @@ function NavBar() {
             </Button>
             <Button
               id="btn-hv"
-              variant="link"
               color="default"
               className={classes.link}
               component={RouterLink}
@@ -175,7 +176,6 @@ function NavBar() {
             </Button>
             <Button
               id="btn-hv"
-              variant="link"
               color="default"
               className={classes.link}
               endIcon={<KeyboardArrowDownIcon />}
@@ -203,7 +203,7 @@ function NavBar() {
           <div className="cart-dropdown">
             <RouterLink to={`/Cart`}>
               <IconButton aria-label="cart">
-                <StyledBadge badgeContent={0} color="secondary">
+                <StyledBadge badgeContent={cart.length} color="secondary">
                   <ShoppingCartIcon />
                 </StyledBadge>
                 </IconButton>
