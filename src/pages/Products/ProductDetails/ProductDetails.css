@@ -31,6 +31,7 @@
 .product-main-img:hover img{
     cursor: zoom-in;
     background-size: 150%;
+    /* transform: scale(1.5); */
     /* border: 1px solid #ddd; */
 }
 .img-style {
@@ -113,5 +114,18 @@
     text-align: center ;
 }
 .product-details-action {
-    margin-top: 1.6 rem;
+    margin-top: 1.6rem;
+}
+.product-details-footer {
+    margin-top: .6rem;
+    border-top: 1px solid #ebebeb;
+    font-weight: 400;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+.product-details-footer .product-category-label {
+    margin-top: .4rem;
+    margin-right: .4rem;
 }

@@ -201,11 +201,13 @@ function NavBar() {
             />
           </div>
           <div className="cart-dropdown">
-            <IconButton aria-label="cart">
-              <StyledBadge badgeContent={0} color="secondary">
-                <ShoppingCartIcon />
-              </StyledBadge>
-            </IconButton>
+            <RouterLink to={`/Cart`}>
+              <IconButton aria-label="cart">
+                <StyledBadge badgeContent={0} color="secondary">
+                  <ShoppingCartIcon />
+                </StyledBadge>
+                </IconButton>
+            </RouterLink>
             <div className="cart-dropdown-menu text-center dropdown-right">
               {/* <p>No products in the cart</p> */}
               <div className="cart-dropdown-products">

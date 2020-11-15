@@ -15,7 +15,7 @@ export const DataProvider = (props) => {
         "img/products/nike/product-1-1-4.jpg",
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort, while tapping into the irreverent spirit of that era's designs. A stretchy-fit sleeve and underfoot cushioning offer a comfortable fit. '90s-inspired details give the shoe its retro flavour.",
-      "contents": ["nike", "men"],
+      "categories": ["nike", "men"],
       "sizes": ["37","38", "39", "40", "41", "42"],
       "price": 99,
       "oldPrice": 199
@@ -30,7 +30,7 @@ export const DataProvider = (props) => {
         "img/products/nike/product-1-4.jpg",
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "contents": ["nike", "men"],
+      "categories": ["nike", "men"],
       "sizes": ["38", "39", "40", "41"],
       "price": 89,
       "oldPrice": 129
@@ -45,7 +45,7 @@ export const DataProvider = (props) => {
         "img/products/nike/product-1-4.jpg",
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "contents": ["nike", "men"],
+      "categories": ["nike", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 99,
       "oldPrice": 109
@@ -60,7 +60,7 @@ export const DataProvider = (props) => {
         "img/products/adidas/product-1-4.jpg",
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "contents": ["adidas", "men"],
+      "categories": ["adidas", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 69,
       "oldPrice": 119
@@ -75,7 +75,7 @@ export const DataProvider = (props) => {
         "img/products/adidas/product-1-4.jpg",
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "contents": ["adidas", "men"],
+      "categories": ["adidas", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 109,
       "oldPrice": 199
@@ -90,7 +90,7 @@ export const DataProvider = (props) => {
         "img/products/converse/product-1-4.jpg",
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "contents": ["converse", "men"],
+      "categories": ["converse", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 80,
       "oldPrice": 100
@@ -105,7 +105,7 @@ export const DataProvider = (props) => {
         "img/products/converse/product-1-4.jpg",
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "contents": ["converse", "men"],
+      "categories": ["converse", "men"],
       "sizes": ["36","38", "39", "40", "41", "42"],
       "price": 90,
       "oldPrice": 99
@@ -120,7 +120,7 @@ export const DataProvider = (props) => {
         "img/products/puma/product-1-4.jpg",
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "contents": ["puma", "men"],
+      "categories": ["puma", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 100,
       "oldPrice": 199
@@ -135,7 +135,7 @@ export const DataProvider = (props) => {
         "img/products/puma/product-1-4.jpg",
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "contents": ["puma", "men"],
+      "categories": ["puma", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 50,
       "oldPrice": 159

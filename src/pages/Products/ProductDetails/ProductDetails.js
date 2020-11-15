@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { DataContext } from '../../contexts/DataProvider';
+import { DataContext } from '../../../contexts/DataProvider';
 
 
 import './ProductDetails.css';
@@ -18,18 +18,23 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutlined';
 
-import i from '../../assets/img/products/nike/product-1-1.jpg'
+import ProductSizes from './ProductSizes';
+import ProductImgCol from './ProductImgCol';
+import Footer from '../../../components/Footer/Footer';
+import ProductDetailsTab from './ProductDetailsTab';
+
+// import i from '../../assets/img/products/nike/product-1-1.jpg';
 
 
 function ProductDetails() {
   const { id } = useParams();
-  const [products, setProducts] = useContext(DataContext); 
+  const [products] = useContext(DataContext); 
+  const [count, setCount] = useState(1);
+  const [index, setIndex] = useState(0);
   
   const details = products.filter((product, index) => {
     return product._id === id;
   });
-
-  const [count, setCount] = useState(1);
 
   return (
     <>
@@ -59,38 +64,19 @@ function ProductDetails() {
                           {/* <div style={{ userSelect: "none", cursor: "crosshair" }}> */}
                             {/* <div style={{ position: "relative", cursor: "zoom-in" }}> */}
                               <img
-                                src={`${process.env.PUBLIC_URL}${product.images[0]}`}
+                                src={`${process.env.PUBLIC_URL}${product.images[index]}`}
                                 alt={product.title }
                               />
                               <div className="img-style">
                                 <img
-                                  src={`${process.env.PUBLIC_URL}${product.images[0]}`}
+                                  src={`${process.env.PUBLIC_URL}${product.images[index]}`}
                                   alt={product.title }
                                 />
                               </div>
                             {/* </div> */}
                           {/* </div> */}
                         </figure>
-                        <div className="product-img-gallery-col">
-                          <div id="product-zoom-id" className="product-gallery-item">
-                            <img
-                              alt=""
-                              src={`${process.env.PUBLIC_URL}${product.images[1]}`}
-                            />
-                          </div>
-                          <div id="product-zoom-id" className="product-gallery-item">
-                            <img
-                              alt=""
-                              src={`${process.env.PUBLIC_URL}${product.images[2]}`}
-                            />
-                          </div>
-                          <div id="product-zoom-id" className="product-gallery-item">
-                            <img
-                              alt=""
-                              src={`${process.env.PUBLIC_URL}${product.images[3]}`}
-                            />
-                          </div>
-                        </div>
+                        <ProductImgCol images={product.images} setIndex={ setIndex } />
                       </div>
                     </Grid>
                     <Grid item xs={6}>
@@ -121,16 +107,7 @@ function ProductDetails() {
                           className="product-details-desc"
                           variant="body1">{product.description}
                         </Typography>
-                        <div className="product-details-sizes">
-                          <label className="product-size-label">Size:</label>
-                          {
-                            product.sizes.map((size,index) => (
-                              <Button className="product-size-btn" key={index} variant="outlined">
-                                {size}
-                              </Button>
-                            ))
-                          }
-                        </div>
+                        <ProductSizes sizes={product.sizes}/>
                         <div className="product-details-quantity">
                           <label className="product-quantity-label">Quantity:</label>
                           <ButtonGroup>
@@ -171,6 +148,16 @@ function ProductDetails() {
                               Add to cart
                           </Button>
                         </div>
+                        <div className="product-details-footer">
+                          <span className="product-category-label">
+                            Category:
+                          </span>
+                          <span>
+                            <Link href="#" variant="subtitle1" color="textSecondary">
+                              {product.categories[0]}
+                            </Link>
+                          </span>
+                        </div>
                       </div>
                     </Grid>
                   </Grid>
@@ -178,7 +165,9 @@ function ProductDetails() {
                 <div className="details-page-bot">
 
                 </div>
+                <ProductDetailsTab description={ product.description }/>
               </Container>
+              <Footer />
             </div>
           </div>
         ))

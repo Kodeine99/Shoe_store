@@ -8,7 +8,8 @@ import { Switch, Route } from 'react-router-dom';
 import About from './pages/About/AboutUs';
 import Home from './pages/Home/Home';
 import Products from './pages/Products/Products';
-import ProductDetails from './pages/Products/ProductDetails';
+import ProductDetails from './pages/Products/ProductDetails/ProductDetails';
+import Cart from './pages/Cart/Cart';
 
 import HeaderTop from './components/Header/headerTop';
 import NavBar from './components/NavBar/NavBar';
@@ -37,7 +38,7 @@ function App() {
           <Route path="/About" exact component={About} />
           <Route path="/Products" exact component={Products} />
           <Route path="/Products/:id" exact component={ProductDetails} />
-          {/* <Route path="/Products" exact component={ProductsContainer} /> */}
+          <Route path="/Cart" exact component={Cart} />
         </Switch> 
       </Router>
     </DataProvider>

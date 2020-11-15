@@ -33,7 +33,7 @@ export default function ImgComp({ src, subtitle, title, price }) {
         <div className="intro-price">{price}</div>
         <Button 
           id="btn"
-          variant="container"
+          variant="contained"
           className={classes.button}
           endIcon={<ArrowRightAltIcon />}
         >

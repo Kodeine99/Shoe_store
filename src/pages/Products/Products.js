@@ -131,7 +131,7 @@ function valuetext(value) {
 
 function Products() {
   const classes = useStyles();
-  const [products, setProducts] = useContext(DataContext);
+  const [products] = useContext(DataContext);
   // console.log(products)
 
   return (
@@ -308,8 +308,8 @@ function Products() {
                             src={ `${process.env.PUBLIC_URL}${product.images[0]}`}
                             price={product.price}
                             oldPrice={product.oldPrice}
-                            cont1={product.contents[0]}
-                            cont2={product.contents[1]}
+                            cont1={product.categories[0]}
+                            cont2={product.categories[1]}
                           />
                         </Grid>
                       ))
