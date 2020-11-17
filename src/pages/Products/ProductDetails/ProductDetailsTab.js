@@ -68,7 +68,7 @@ function ProductDetailsTab({description}) {
           <Tab label="Reviews (0)" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      <div className="tab-content">
+      <div className="tab-content product-details-tab">
         <TabPanel className="tab-panel" value={value} index={0}>
           <h3>Product Information</h3>
           {description}

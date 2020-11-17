@@ -28,10 +28,6 @@ import './Products.css';
 import ProductCard2 from "../../components/Card/ProductCard2";
 import Footer from "../../components/Footer/Footer";
 
-function handleClick(event) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
-}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -151,10 +147,10 @@ function Products() {
         <div className="breadcrumb-nav">
           <Container className="breadcrumb-container">
             <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
-              <Link className="breadcumbs-icon" color="inherit" href="/" onClick={handleClick}>
+              <Link className="breadcumbs-icon" color="inherit" href="/">
                 <Typography color="inherit">Home</Typography>
               </Link>
-              <Link color="inherit" href="/getting-started" onClick={handleClick}>
+              <Link color="inherit" href="/getting-started">
                 <Typography color="inherit">Products</Typography>
               </Link>
               <Typography color="textPrimary">Product</Typography>

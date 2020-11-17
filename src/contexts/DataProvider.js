@@ -18,7 +18,8 @@ export const DataProvider = (props) => {
       "categories": ["nike", "men"],
       "sizes": ["37","38", "39", "40", "41", "42"],
       "price": 99,
-      "oldPrice": 199
+      "oldPrice": 199,
+      "count": 1
     },
     {
       "_id": "2",
@@ -33,7 +34,8 @@ export const DataProvider = (props) => {
       "categories": ["nike", "men"],
       "sizes": ["38", "39", "40", "41"],
       "price": 89,
-      "oldPrice": 129
+      "oldPrice": 129,
+      "count": 1
     },
     {
       "_id": "3",
@@ -48,7 +50,8 @@ export const DataProvider = (props) => {
       "categories": ["nike", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 99,
-      "oldPrice": 109
+      "oldPrice": 109,
+      "count": 1
     },
     {
       "_id": "4",
@@ -63,7 +66,8 @@ export const DataProvider = (props) => {
       "categories": ["adidas", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 69,
-      "oldPrice": 119
+      "oldPrice": 119,
+      "count": 1
     },
     {
       "_id": "5",
@@ -78,7 +82,8 @@ export const DataProvider = (props) => {
       "categories": ["adidas", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 109,
-      "oldPrice": 199
+      "oldPrice": 199,
+      "count": 1
     },
     {
       "_id": "6",
@@ -93,7 +98,8 @@ export const DataProvider = (props) => {
       "categories": ["converse", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 80,
-      "oldPrice": 100
+      "oldPrice": 100,
+      "count": 1
     },
     {
       "_id": "7",
@@ -108,7 +114,8 @@ export const DataProvider = (props) => {
       "categories": ["converse", "men"],
       "sizes": ["36","38", "39", "40", "41", "42"],
       "price": 90,
-      "oldPrice": 99
+      "oldPrice": 99,
+      "count": 1
     },
     {
       "_id": "8",
@@ -123,7 +130,8 @@ export const DataProvider = (props) => {
       "categories": ["puma", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 100,
-      "oldPrice": 199
+      "oldPrice": 199,
+      "count": 1
     },
     {
       "_id": "9",
@@ -138,7 +146,8 @@ export const DataProvider = (props) => {
       "categories": ["puma", "men"],
       "sizes": ["38", "39", "40", "41", "42"],
       "price": 50,
-      "oldPrice": 159
+      "oldPrice": 159,
+      "count": 1
     },
   ]);
 

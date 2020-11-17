@@ -16,13 +16,11 @@ import Typography from "@material-ui/core/Typography";
 import Badge from '@material-ui/core/Badge';
 
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import ClearIcon from "@material-ui/icons/Clear";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 
-import product1 from "../../assets/img/products/nike/product-1-1.jpg";
+import CartDropdown from "./CartDropdown";
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -208,45 +206,7 @@ function NavBar() {
                 </StyledBadge>
                 </IconButton>
             </RouterLink>
-            <div className="cart-dropdown-menu text-center dropdown-right">
-              {/* <p>No products in the cart</p> */}
-              <div className="cart-dropdown-products">
-                <div className="cart-product">
-                  <div className="cart-product-details">
-                    <h4 className="cart-product-title">
-                      <a href="#p">Nike Jordan Zoom' 92</a>
-                    </h4>
-                    <span className="cart-product-info">
-                      <span className="cart-product-qty">1</span>x $99.00
-                    </span>
-                  </div>
-                  <figure className="cart-product-img-container">
-                    <a className="cart-product-img" href="#i">
-                      <img src={product1} alt="Product 1"></img>
-                    </a>
-                  </figure>
-                  <IconButton className="btn-remove" title="Remove Product">
-                    <ClearIcon />
-                  </IconButton>
-                </div>
-              </div>
-              <div className="cart-dropdown-total">
-                <span>Total </span>
-                <span className="cart-total-price"> $99.00</span>
-              </div>
-              <div className="cart-dropdown-action">
-                <Button variant="outlined" color="primary">
-                  View Cart
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="default"
-                  endIcon={<ArrowRightAltIcon />}
-                >
-                  Check Out
-                </Button>
-              </div>
-            </div>
+            <CartDropdown />
           </div>
         </Toolbar>
       </AppBar>

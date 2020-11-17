@@ -1,0 +1,131 @@
+table {
+    border-collapse: collapse;
+}
+.cart-page .main{
+    margin-bottom: 2rem;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    /* overflow-x: auto; */
+    /* -webkit-overflow-scrolling: touch; */
+}
+/* .cart-table .cart-table-content {
+    border: 1px solid #ebebeb;
+} */
+.cart-table-content table {
+    width: 100%;
+}
+.cart-table-content table thead>tr {
+    border: 1px solid #ebebeb;
+    background-color: #f9f9f9;
+}
+.cart-table-content table thead>tr th{
+     font-size: 14px;
+    font-weight: 500;
+    padding: 21px 45px 22px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #333;
+    border-top: none;
+}
+.cart-table-content table tbody>tr {
+    border-bottom: 1px solid #ebebeb;
+}
+.cart-table-content table tbody>tr td.product-thumbnail{
+    width: 150px;
+}
+.img-fluid, .img-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+.cart-table-content table tbody>tr td {
+    font-size: 15px;
+    padding: 30px 0 30px 30px;
+    text-align: center;
+    color: #333;
+}
+.cart-table-content table tbody>tr td.product-name {
+    width: 435px;
+    text-align: center;
+}
+.cart-table-content table tbody>tr td.product-name a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+.cart-item-variation {
+    margin-top: 10px;
+}
+.cart-item-variation span {
+    display: block;
+}
+.cart-table-content table tbody>tr td.product-price-cart {
+    width: 435px;
+}
+cart-table-content table tbody>tr td.product-price-cart span {
+    font-weight: 500;
+    color: #333;
+}
+.cart-table-content table tbody>tr td.product-quantity {
+    width: 435px;
+}
+.cart-table-content table tbody>tr td.product-quantity .cart-plus-minus {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    padding: 0;
+}
+.cart-table-content table tbody>tr td.product-quantity .cart-plus-minus .qtybutton {
+    font-size: 16px;
+    position: absolute;
+    float: inherit;
+    width: 20px;
+    margin: 0;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+    text-align: center;
+    color: #333;
+    border: none;
+    background: none;
+}
+button, input[type=submit] {
+    cursor: pointer;
+}
+a, button, img, input, span {
+    transition: all .3s ease 0s;
+}
+.cart-table-content table tbody>tr td.product-quantity .cart-plus-minus .dec.qtybutton {
+    top: 0;
+    left: 0;
+    height: 40px;
+    border-right: 1px solid #e5e5e5;
+}
+.cart-table-content table tbody>tr td.product-quantity .cart-plus-minus .inc.qtybutton {
+    top: 0;
+    right: 0;
+    height: 40px;
+    border-left: 1px solid #e5e5e5;
+}
+.cart-table-content table tbody>tr td.product-quantity .cart-plus-minus input.cart-plus-minus-box {
+    font-size: 14px;
+    float: left;
+    width: 110px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+    border: 1px solid #e1e1e1;
+    background: transparent none repeat scroll 0 0;
+}
+.cart-table-content table tbody>tr td.product-subtotal {
+    font-weight: 500;
+    color: #333;
+}
+.cart-table-content table tbody>tr td.product-remove {
+    width: 100px;
+}
