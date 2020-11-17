@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { DataContext } from '../../contexts/DataProvider';
 import { Link as RouterLink } from "react-router-dom";
 
@@ -11,11 +11,40 @@ import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
 function CartDropdown() {
   const value = useContext(DataContext);
-  const [cart] = value.cart;
+  const [cart, setCart] = value.cart;
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    const getTotal = () => {
+      const res = cart.reduce((prev, item) => {
+        return prev + (item.price * item.count);
+      }, 0)
+      setTotal(res);
+    }
+    getTotal();
+  }, [cart]);
+
+  const removeProduct = id => {
+    cart.forEach((item, index) => {
+      if (item._id === id) {
+        cart.splice(index, 1);
+      }
+    })
+    setCart([...cart]);
+  };
+
+
+  if (cart.length === 0) {
+    return (
+      <div className="cart-dropdown-menu text-center dropdown-right">
+        <p>No products in the cart</p>
+      </div>
+    )
+  }
+    
   return (
     <div>
       <div className="cart-dropdown-menu text-center dropdown-right">
-        <p>No products in the cart</p>
         {
           cart.map((product, index) => (
             <div key={index} className="cart-dropdown-products">
@@ -30,10 +59,10 @@ function CartDropdown() {
                 </div>
                 <figure className="cart-product-img-container">
                   <a className="cart-product-img" href="#i">
-                    <img src={`${process.env.PUBLIC_URL}${product.images[index]}`} alt="Product 1"></img>
+                    <img src={`${process.env.PUBLIC_URL}${product.images[0]}`} alt="Product 1"></img>
                   </a>
                 </figure>
-                <IconButton className="btn-remove" title="Remove Product">
+                <IconButton onClick={() => removeProduct(product._id)} className="btn-remove" title="Remove Product">
                   <ClearIcon />
                 </IconButton>
               </div>
@@ -42,7 +71,7 @@ function CartDropdown() {
         }
         <div className="cart-dropdown-total">
           <span>Total </span>
-          <span className="cart-total-price"> $99.00</span>
+          <span className="cart-total-price">${total }.00</span>
         </div>
         <div className="cart-dropdown-action">
           <Button

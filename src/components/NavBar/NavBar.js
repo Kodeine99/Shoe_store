@@ -98,6 +98,7 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     flexWrap: "wrap",
+    justifyContent:"space-between",
   },
   toolbarTitle: {
     flexGrow: 1,
@@ -142,14 +143,16 @@ function NavBar() {
         className={appBarClass}
       >
         <Toolbar className={classes.toolbar}>
-          <Typography
-            variant="h6"
-            color="inherit"
-            noWrap
-            className={classes.toolbarTitle}
-          >
-            KdShop
-          </Typography>
+          <RouterLink to={`/`}>
+            <Typography
+              variant="h6"
+              color="inherit"
+              noWrap
+              className={classes.toolbarTitle}
+            >
+                KdShop
+            </Typography>
+          </RouterLink>
           <div className={classes.grow} />
           <nav className={classes.nav}>
             <Button
