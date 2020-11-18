@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import { DataContext } from '../../../contexts/DataProvider';
 import '../../../assets/css/NewArrivals.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -11,7 +12,12 @@ import Tab from '@material-ui/core/Tab';
 
 
 export default function NewArrivals() {
-  const [value, setValue] = React.useState(0);
+  const valueProduct = useContext(DataContext);
+  const [products] = valueProduct.products;
+  // console.log(products)
+  const addCart = valueProduct.addCart;
+
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -74,14 +80,20 @@ export default function NewArrivals() {
       <div className="tab-content tab-content-carousel">
         <div>
           <Slider {...settings}>
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {
+              products.map(product => (
+               <ProductCard
+                  addCart={() =>addCart(product._id)}
+                  productId={product._id}
+                  title={product.title}
+                  src={ `${process.env.PUBLIC_URL}${product.images[0]}`}
+                  price={product.price}
+                  oldPrice={product.oldPrice}
+                  cont1={product.categories[0]}
+                  cont2={product.categories[1]}
+                />
+              ))
+            }
           </Slider>
       </div>
       </div>

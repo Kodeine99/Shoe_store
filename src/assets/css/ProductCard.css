@@ -22,11 +22,11 @@ a {
 .text-center {
     text-align: center !important;
 }
-.carousel-product {
+.carousel-product-1{
     /* width: 100%; */
     margin: 0 4px !important;
 }
-.carousel-product .product {
+.carousel-product-1 .product {
     margin-bottom: 0 !important;
 }
 .product {
@@ -38,13 +38,13 @@ a {
     overflow: hidden;
     
 }
-.product.product-3 {
+.product.product-n {
     width: 100%;
     position: relative;
     overflow: hidden;
     background-color: #fff;
 }
-.product.product-3:hover {
+.product.product-n:hover {
     box-shadow: none; 
 }
 .product:hover .product-action-vertical {
@@ -67,7 +67,7 @@ a {
     margin-bottom: 0;
     overflow: hidden;
 }
-.product.product-3 .product-media::before {
+.product.product-n .product-media::before {
     padding-top: 94.82759%;
 }
 .product-media::before {
@@ -161,7 +161,7 @@ a {
     background-color: #fff;
 }
 
-.product.product-3 .product-body {
+.product.product-n .product-body {
     padding-bottom: 1.8rem;
     transition: transform .35s ease;
     padding: 1rem 1rem 0;
@@ -182,19 +182,19 @@ a {
     letter-spacing: -.01em;
     margin-bottom: .3rem;
 }
-.product.product-3 .product-cat {
+.product.product-n .product-cat {
     font-weight: 400;
     font-size: 1.5rem;
     color: #ccc;
     margin-bottom: 1rem;
 }
-.product.product-3 .product-cat a{
+.product.product-n .product-cat a{
     transition: all .35s ease;
 }
 .product-cat a {
     color: inherit;
 }
-.product.product-3 .product-title {
+.product.product-n .product-title {
     font-size: 1.2rem;
     line-height: 1.3;
     margin-bottom: .6rem;
@@ -247,7 +247,7 @@ a {
     transform: translateY(100%);
     visibility: hidden;
 }
-.product.product-3 .product-footer {
+.product.product-n .product-footer {
     display: block;
     position: absolute;
     bottom: 0;
@@ -330,7 +330,7 @@ a {
 .product-nav-dots a.active {
     box-shadow: 0 0 0 0.1rem #cccccc;
 }
-.product.product-3 .product-action {
+.product.product-n .product-action {
     position: static;
     left: auto;
     right: auto;
@@ -360,7 +360,7 @@ a {
     visibility: hidden;
     transform: translateY(100%);
 }
-.product.product-3 .btn-product {
+.product.product-n .btn-product {
     font-weight: 400;
     padding-top: .1rem;
     padding-bottom: .1rem;

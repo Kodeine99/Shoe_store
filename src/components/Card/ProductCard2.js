@@ -13,8 +13,8 @@ function ProductCard2(props) {
 
   
   return (
-    <div className="carousel-product" style={{margin: '0 4px'}} >
-      <div className="product product-3 text-center">
+    <div className="carousel-product-2" style={{margin: '0 4px'}} >
+      <div className="product product-2 text-center">
         <figure className="product-media">
           {/* <span className="product-label label-sale">40% off</span> */}
           <RouterLink to={`/products/${props.productId}`} href="#i" >

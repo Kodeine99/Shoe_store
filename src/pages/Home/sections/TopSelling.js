@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DataContext } from '../../../contexts/DataProvider';
 import '../../../assets/css/TopSelling.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -26,6 +27,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TopSelling() {
   const classes = useStyles();
+
+  const valueProduct = useContext(DataContext);
+  const [products] = valueProduct.products;
+  const addCart = valueProduct.addCart;
+
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -34,22 +40,25 @@ export default function TopSelling() {
   function FormRow() {
     return (
       <React.Fragment>
-        <Grid item xs={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xs={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xs={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xs={3}>
-          <ProductCard />
-        </Grid>
+        {
+          products.filter(product => product.filter === 'topselling').map(product => (
+            <Grid item xs={4}>
+              <ProductCard
+                addCart={() => addCart(product._id)}
+                productId={product._id}
+                title={product.title}
+                src={`${process.env.PUBLIC_URL}${product.images[0]}`}
+                price={product.price}
+                oldPrice={product.oldPrice}
+                cont1={product.categories[0]}
+                cont2={product.categories[1]}
+              />
+            </Grid>
+          ))
+        }
       </React.Fragment>
     );
   }
-
   return (
     <div className={classes.root}>
       <div className="heading">
@@ -69,9 +78,6 @@ export default function TopSelling() {
         </div>
       </div>
       <Grid container spacing={1}>
-        <Grid container item xs={12} spacing={1} className={classes.marAuto}>
-          <FormRow />
-        </Grid>
         <Grid container item xs={12} spacing={1} className={classes.marAuto}>
           <FormRow />
         </Grid>
