@@ -65,25 +65,24 @@ function NavBar() {
       <AppBar position="static" color="inherit" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            <Button href="#" color="primary" variant="link" className={classes.smallLink} endIcon={<ArrowDropDownOutlinedIcon />}>
+            <Button href="#" color="primary" className={classes.smallLink} endIcon={<ArrowDropDownOutlinedIcon />}>
               Vie
             </Button>
           </Typography>
           <nav>
-          <Button variant="link" color="default" className={classes.smallLink}>
+          <Button color="default" className={classes.smallLink}>
             Call +84 123456789
           </Button>
-          <Button variant="link" color="default" className={classes.smallLink} component={RouterLink} to="/About">
+          <Button color="default" className={classes.smallLink} component={RouterLink} to="/About">
             About Us
           </Button>
-          <Button variant="link" color="default" className={classes.smallLink}>
+          <Button color="default" className={classes.smallLink}>
             Contact Us
           </Button>
           </nav>
           <Button
             href="#"
             color="primary"
-            variant="link"
             className={classes.smallLink}
             startIcon={<AccountCircleIcon />}
             onClick= {() => handleOpen()}

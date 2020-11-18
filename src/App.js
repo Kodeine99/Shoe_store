@@ -19,7 +19,7 @@ import 'fontsource-inter';
 // import ProductsContainer from './components/pages/Products/ProductsContainer';
 import {Grid} from '@material-ui/core'
 import ScrollArrow from './components/ScrollArrow/ScrollArrow';
-import LoginModal from './components/Modal/LoginModal'
+// import LoginModal from './components/Modal/LoginModal';
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
           <Grid item>
             <HeaderTop />
             <NavBar />
-            <LoginModal />
+            {/* <LoginModal open={ open}/> */}
           </Grid>
           <ScrollArrow />
         </Grid>

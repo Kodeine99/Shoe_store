@@ -146,7 +146,7 @@ function NavBar() {
           <RouterLink to={`/`}>
             <Typography
               variant="h6"
-              color="inherit"
+              color="secondary"
               noWrap
               className={classes.toolbarTitle}
             >

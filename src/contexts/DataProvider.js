@@ -55,7 +55,7 @@ export const DataProvider = (props) => {
     },
     {
       "_id": "4",
-      "title": "X ghosted Tuft 16.2",
+      "title": "Adidas Ultra Boots new",
       "images": [
         "img/products/adidas/product-1-1.jpg",
         "img/products/adidas/product-1-2.jpg",
@@ -71,7 +71,7 @@ export const DataProvider = (props) => {
     },
     {
       "_id": "5",
-      "title": "Adidas Ultra Boots new",
+      "title": "X ghosted Tuft 16.2",
       "images": [
         "img/products/adidas/product-2-1.jpg",
         "img/products/adidas/product-1-2.jpg",

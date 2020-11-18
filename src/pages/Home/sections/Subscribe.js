@@ -44,7 +44,7 @@ function Subscribe() {
             </div>
             <form className="subscribe-form" action="#">
               <div className="subscribe-input">
-                <Paper component="form" className={classes.root}>
+                <Paper className={classes.root}>
                   <InputBase
                     type="email"
                     className={classes.input}

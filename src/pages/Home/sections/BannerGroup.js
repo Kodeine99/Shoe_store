@@ -8,9 +8,6 @@ import banner1 from '../../../assets/img/banners/banner-1.jpg';
 import banner2 from '../../../assets/img/banners/Adidas/banner05.jpg';
 import banner3 from '../../../assets/img/banners/Converse/Converse-02.jpg';
 import banner4 from '../../../assets/img/banners/Nike/banner-02.jpg';
-// import banner5 from '../../../../assets/img/banners/banner-5.jpg';
-// import banner6 from '../../../../assets/img/banners/banner-6.jpg';
-
 // const useStyles = makeStyles((theme) => ({
 //   container: {
 //     display: 'grid',
@@ -54,7 +51,7 @@ export default function CSSGrid() {
             </div>
             <Button 
               id="btn"
-              variant="container"
+              variant="contained"
               className={classes.button}
             >
               Discover Now  
@@ -73,7 +70,7 @@ export default function CSSGrid() {
             </div>
             <Button 
               id="btn"
-              variant="container"
+              variant="contained"
               className={classes.button}
             >
               Shop Now  
@@ -92,7 +89,7 @@ export default function CSSGrid() {
             </div>
             <Button 
               id="btn-more"
-              variant="container"
+              variant="contained"
               className={classes.button}
             >
               Shop Now  
@@ -112,7 +109,7 @@ export default function CSSGrid() {
             </div>
             <Button 
               id="btn"
-              variant="container"
+              variant="contained"
               className={classes.button}
             >
               Discover Now  

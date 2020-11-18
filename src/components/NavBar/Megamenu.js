@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+// import Link from '@material-ui/core/Link';
 
 import megaMenuBanner1 from '../../assets/img/banners/megamenu-banner-02.jpg';
 
@@ -12,40 +13,40 @@ function Megamenu() {
             <div className="menu-content-left">
               <div className="menu-title">Adidas</div>
               <ul>
-                <li><a href="#1">Ultra Boots</a></li>
-                <li><a href="#1">Originals</a></li>
-                <li><a href="#1">NMD</a></li>
+                <li><a href="#ultraboots">Ultra Boots</a></li>
+                <li><a href="#originals">Originals</a></li>
+                <li><a href="#nmd">NMD</a></li>
                 <li>
-                  <a href="#1">Soccers</a>
+                  <a href="#soccers">Soccers</a>
                   <span className="tip tip-new">New</span>
                 </li>
               </ul>
               <div className="menu-title">Nike</div>
               <ul>
                 <li>
-                  <a href="#1">Air Force 1</a>
+                  <a href="#airforce1">Air Force 1</a>
                   <span className="tip tip-hot">New</span>
                 </li>
-                <li><a href="#1">Air Jordan</a></li>
-                <li><a href="#1">Nike Football</a></li>
+                <li><a href="#airjodan">Air Jordan</a></li>
+                <li><a href="#nikefootball">Nike Football</a></li>
               </ul>
             </div>
             <div className="menu-content-right">
               <div className="menu-title">Converse</div>
               <ul>
-                <li><a href="#1">Classic</a></li>
+                <li><a href="#classic">Classic</a></li>
                 <li>
-                  <a href="#1">Chuck 70s</a>
+                  <a href="#chuck70s">Chuck 70s</a>
                   <span className="tip tip-hot">Hot</span>
                 </li>
-                <li><a href="#1">CX</a></li>
-                <li><a href="#1">One Star</a></li>
+                <li><a href="#cx">CX</a></li>
+                <li><a href="#onestar">One Star</a></li>
               </ul>
               <div className="menu-title">Puma</div>
               <ul>
-                <li><a href="#1">Classic</a></li>
-                <li><a href="#1">Running</a></li>
-                <li><a href="#1">Puma Soccers</a></li>
+                <li><a href="#classic">Classic</a></li>
+                <li><a href="#running">Running</a></li>
+                <li><a href="#pumasoccer">Puma Soccers</a></li>
               </ul>
             </div>
           </div>

@@ -34,7 +34,7 @@ function Deals() {
         <div className="deals-box-button">
           <Button 
             id="btn-deals"
-            variant="container"
+            variant="contained"
             className={classes.button}
             endIcon={<ArrowRightAltIcon />}
           >

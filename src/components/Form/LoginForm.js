@@ -50,13 +50,13 @@ function LoginForm() {
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <TextField
-        id="outlined-secondary"
+        id="oulined-username"
         label="Username or Email address *"
         variant="outlined"
         color="secondary"
       />
       <TextField
-        id="outlined-secondary"
+        id="outlined-password"
         label="Password"
         variant="outlined"
         color="secondary"

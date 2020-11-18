@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
+import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 // import Link from '@material-ui/core/Link';
 
@@ -50,13 +51,13 @@ function RegisterForm() {
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <TextField
-        id="outlined-secondary"
+        id="outlined-youremail"
         label="Your Email address *"
         variant="outlined"
         color="secondary"
       />
       <TextField
-        id="outlined-secondary"
+        id="outlined-password"
         label="Password"
         variant="outlined"
         color="secondary"
@@ -77,7 +78,7 @@ function RegisterForm() {
         />
       </div>
       <div className="form-choice">
-        <p className="text-center">or sign in with</p>
+        <Typography className="text-center">or sign in with</Typography>
       </div>
       <div className="more-signin">
         <Button
