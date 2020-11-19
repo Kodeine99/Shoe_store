@@ -22,8 +22,8 @@ function Boxes() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-        <Grid container spacing={3} item xs={12} style={{margin: '0'}}>
-          <Grid item xs={3} style={{position: 'relative'}}>
+        <Grid container spacing={3} style={{margin: '0'}}>
+          <Grid item lg={3} md={6} sm={12} style={{position: 'relative'}}>
             <div className="icon-box icon-box-side">
               <span className="icon-box-icon">
               <LocalShippingOutlinedIcon style={{fontSize: '3rem'}} />
@@ -34,7 +34,7 @@ function Boxes() {
               </div>
             </div>
           </Grid>
-          <Grid item xs={3} style={{position: 'relative'}} className="seperator">
+          <Grid item lg={3} md={6} sm={12} style={{position: 'relative'}} className="seperator">
             <div className="icon-box icon-box-side">
               <span className="icon-box-icon">
                 <RotateLeftIcon style={{fontSize: '3rem'}} />
@@ -45,7 +45,7 @@ function Boxes() {
               </div>
             </div>
           </Grid>
-          <Grid item xs={3} style={{position: 'relative'}} className="seperator">
+          <Grid item lg={3} md={6} sm={12} style={{position: 'relative'}} className="seperator">
             <div className="icon-box icon-box-side">
               <span className="icon-box-icon">
                 <InfoOutlinedIcon style={{fontSize: '3rem'}} />
@@ -56,7 +56,7 @@ function Boxes() {
               </div>
             </div>
           </Grid>
-          <Grid item xs={3} style={{position: 'relative'}} className="seperator">
+          <Grid item lg={3} md={6} sm={12} style={{position: 'relative'}} className="seperator">
             <div className="icon-box icon-box-side">
               <span className="icon-box-icon">
                 <ContactSupportOutlinedIcon style={{fontSize: '3rem'}} />

@@ -42,7 +42,7 @@ export default function TopSelling() {
       <React.Fragment>
         {
           products.filter(product => product.filter === 'topselling').map(product => (
-            <Grid item xs={4}>
+            <Grid item md={4} sm={6}>
               <ProductCard
                 addCart={() => addCart(product._id)}
                 productId={product._id}
@@ -78,7 +78,7 @@ export default function TopSelling() {
         </div>
       </div>
       <Grid container spacing={1}>
-        <Grid container item xs={12} spacing={1} className={classes.marAuto}>
+        <Grid container spacing={1} className={classes.marAuto}>
           <FormRow />
         </Grid>
       </Grid>

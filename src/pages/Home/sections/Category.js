@@ -18,7 +18,7 @@ function Category() {
   return (
     <div className={classes.root} style={{paddingTop: "50px", paddingBottom: "50px"}}>
       <Grid container spacing={3}>
-        <Grid item xs>
+        <Grid item md={4} sm={12}>
           <div className="banner banner-cat">
             <a href="#cat"><img src={banner5} alt="Banner" ></img></a>
             <div className="banner-content banner-content-overlay text-center">
@@ -28,7 +28,7 @@ function Category() {
             </div>
           </div>
         </Grid>
-        <Grid item xs>
+        <Grid item md={4} sm={12}>
           <div className="banner banner-cat">
             <a href="#cat"><img src={banner6} alt="Banner" ></img></a>
             <div className="banner-content banner-content-overlay text-center">
@@ -38,7 +38,7 @@ function Category() {
             </div>
           </div>
         </Grid>
-        <Grid item xs>
+        <Grid item md={4} sm={12}>
           <div className="banner banner-cat">
             <a href="#cat"><img src={banner7} alt="Banner" ></img></a>
             <div className="banner-content banner-content-overlay text-center">
