@@ -85,9 +85,9 @@ export default function CartTable() {
                     </Link>
                   </td>
                   <td className="product-name">
-                        <Link href="#">{product.title }</Link>
+                    <Link href="#">{product.title }</Link>
                     <div className="cart-item-variantion">
-                          <span>Size: { product.size }</span>
+                      <span>Size: { product.size }</span>
                     </div>
                   </td>
                   <td className="product-price-cart">
@@ -95,24 +95,24 @@ export default function CartTable() {
                   </td>
                   <td className="product-quantity">
                     <div className="cart-plus-minus">
-                          <button
-                            className="dec qtybutton"
-                            onClick={()=> reduce(product._id)}
-                          >
-                            -
-                          </button>
-                        <input
-                          className="cart-plus-minus-box"
-                          type="text"
-                          value={product.count}
-                        >
-                        </input>
-                          <button
-                            className="inc qtybutton"
-                            onClick={() => increase(product._id)}
-                          >
-                            +
-                          </button>
+                      <button
+                        className="dec qtybutton"
+                        onClick={()=> reduce(product._id)}
+                      >
+                        -
+                      </button>
+                      <input
+                        className="cart-plus-minus-box"
+                        type="text"
+                        value={product.count}
+                      >
+                      </input>
+                      <button
+                        className="inc qtybutton"
+                        onClick={() => increase(product._id)}
+                      >
+                        +
+                      </button>
                     </div>
                   </td>
                       <td className="product-subtotal">${product.count * product.price }.00</td>
