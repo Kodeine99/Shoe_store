@@ -10,9 +10,11 @@ import Typography from '@material-ui/core/Typography';
 import { Container } from '@material-ui/core';
 
 import ArrowDropDownOutlinedIcon from '@material-ui/icons/ArrowDropDownOutlined';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import LoginModal from '../Modal/LoginModal';
+// import { Link } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -69,26 +71,47 @@ function NavBar() {
               Vie
             </Button>
           </Typography>
-          <nav>
-          <Button color="default" className={classes.smallLink}>
-            Call +84 123456789
-          </Button>
-          <Button color="default" className={classes.smallLink} component={RouterLink} to="/About">
-            About Us
-          </Button>
-          <Button color="default" className={classes.smallLink}>
-            Contact Us
-          </Button>
-          </nav>
-          <Button
+          <nav className="header-nav-link">
+            <Button color="default" className={classes.smallLink}>
+              Call +84 123456789
+            </Button>
+            <Button
+              color="default"
+              className={classes.smallLink}
+                component={RouterLink} to="/About"
+            >
+              About Us
+            </Button>
+            <Button color="default" className={classes.smallLink}>
+              Contact Us
+            </Button>
+            <Button
             href="#"
             color="primary"
             className={classes.smallLink}
             startIcon={<AccountCircleIcon />}
             onClick= {() => handleOpen()}
-          >
-            Login
-          </Button>
+            >
+              Login
+            </Button>
+          </nav>
+          <nav className="header-nav-link-res">
+            <ul className="top-menu">
+              <Button
+                style={{marginBottom: '0'}}
+                id="list-link-button"
+                component="a"
+              > Links
+                <ExpandMoreIcon />
+              </Button>
+              <ul className="list-link-menu">
+                <li><a href="#phone">Call +0123456789</a></li>
+                <li><a href="#phone">About Us</a></li>
+                <li><a href="#phone">Contact Us</a></li>
+                <li><a href="#phone">Login</a></li>
+              </ul>
+            </ul>
+          </nav>
         </Toolbar>
       </AppBar>
       <LoginModal open={ open } handleClose={ handleClose }/>
