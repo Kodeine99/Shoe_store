@@ -25,21 +25,23 @@ function App() {
   return (
     <DataProvider>
       <Router>
-        <Grid container direction="column">
-          <Grid item>
-            <HeaderTop />
-            <NavBar />
-            {/* <LoginModal open={ open}/> */}
+        <div className="page-wrapper">
+          <Grid container direction="column">
+            <Grid item>
+              <HeaderTop />
+              <NavBar />
+              {/* <LoginModal open={ open}/> */}
+            </Grid>
+            <ScrollArrow />
           </Grid>
-          <ScrollArrow />
-        </Grid>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/About" exact component={About} />
-          <Route path="/Products" exact component={Products} />
-          <Route path="/Products/:id" exact component={ProductDetails} />
-          <Route path="/Cart" exact component={Cart} />
-        </Switch> 
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/About" exact component={About} />
+            <Route path="/Products" exact component={Products} />
+            <Route path="/Products/:id" exact component={ProductDetails} />
+            <Route path="/Cart" exact component={Cart} />
+          </Switch> 
+        </div>
       </Router>
     </DataProvider>
   )

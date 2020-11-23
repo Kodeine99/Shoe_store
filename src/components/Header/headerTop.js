@@ -46,6 +46,16 @@ const useStyles = makeStyles((theme) => ({
   },
   nav: {
     marginRight: '100px'
+  },
+  headerNavLinks: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  headerNavLinksRes: {
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    }
   }
 }));
 
@@ -71,7 +81,7 @@ function NavBar() {
               Vie
             </Button>
           </Typography>
-          <nav className="header-nav-link">
+          <nav className={classes.headerNavLinks}>
             <Button color="default" className={classes.smallLink}>
               Call +84 123456789
             </Button>
@@ -95,11 +105,10 @@ function NavBar() {
               Login
             </Button>
           </nav>
-          <nav className="header-nav-link-res">
+          <nav className={classes.headerNavLinksRes}>
             <ul className="top-menu">
               <Button
                 style={{marginBottom: '0'}}
-                id="list-link-button"
                 component="a"
               > Links
                 <ExpandMoreIcon />

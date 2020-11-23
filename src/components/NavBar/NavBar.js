@@ -1,26 +1,32 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import "../../assets/css/NavBar.css";
-import MegaMenu from "./Megamenu";
-// import MegaMenuSm from './MegaMenuSm';
-import MegamenuMin from "./MegaMenuMin";
 import { DataContext } from '../../contexts/DataProvider';
 
 import { withStyles } from '@material-ui/core/styles';
 import { fade, makeStyles } from "@material-ui/core/styles";
-import { Container, IconButton } from "@material-ui/core";
-import AppBar from "@material-ui/core/AppBar";
-import Button from "@material-ui/core/Button";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Badge from '@material-ui/core/Badge';
+import {
+  Container,
+  IconButton,
+  AppBar,
+  Button,
+  Toolbar,
+  Typography,
+  Badge,
+  InputBase
+} from "@material-ui/core";
 
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from "@material-ui/icons/Search";
-import InputBase from "@material-ui/core/InputBase";
 
 import CartDropdown from "./CartDropdown";
+import Sidebar from '../Sidebar/Sidebar';
+import MegaMenu from "./Megamenu";
+// import MegaMenuSm from './MegaMenuSm';
+import MegamenuMin from "./MegaMenuMin";
+
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -47,11 +53,19 @@ const useStyles = makeStyles((theme) => ({
     left: "0",
     right: "0",
     top: "0",
-    zIndex: "1040",
+    zIndex: "999",
     animationName: "fixedHeader",
     animationDuration: ".4s",
     backgroundColor: "#fff",
     boxShadow: "0 3px 6px rgba(51,51,51,0.05)",
+    [theme.breakpoints.down("sm")]: {
+      position: "relative",
+      animationDuration: "0s",
+    },
+  },
+  menuLogoNav: {
+    display: "flex",
+    alignItems: "center",
   },
   title: {
     display: "none",
@@ -72,6 +86,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
       width: "auto",
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
     },
   },
   searchIcon: {
@@ -108,14 +125,21 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
   },
   nav: {
-    // marginRight: '100px'
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  menuIcon: {
+    [theme.breakpoints.up("md")]: {
+      display: "none"
+    }
   },
   endIcon: {
     marginLeft: "0px !important",
   },
 }));
 
-function NavBar() {
+function NavBar(props) {
   const classes = useStyles();
   const value = useContext(DataContext);
   const [cart] = value.cart;
@@ -123,6 +147,14 @@ function NavBar() {
   const [appBarClass, setBarClass] = useState(`${classes.appBar}`);
   // console.log(appBarClass);
 
+  // state cua parent, dung de show sidebar
+  const [show, setShow] = useState(false);
+
+  // changShow(e) : nhan gia tri e duoc truyen lai tu component con, sau do setShow(e), e o day la false -> hide sidebar 
+  const changeShow = (e) => {
+    setShow(e)
+  }
+  
   useEffect(() => {
     window.addEventListener("scroll", () => {
       // console.log(appBarClass);
@@ -133,6 +165,7 @@ function NavBar() {
       }
     });
   });
+
   return (
     <Container>
       <AppBar
@@ -143,16 +176,30 @@ function NavBar() {
         className={appBarClass}
       >
         <Toolbar className={classes.toolbar}>
-          <RouterLink to={`/`}>
-            <Typography
-              variant="h6"
-              color="secondary"
-              noWrap
-              className={classes.toolbarTitle}
-            >
+          <nav className={classes.menuLogoNav}>
+            <IconButton
+              className={classes.menuIcon}
+              onClick={() => { setShow(!show) }}
+              // onclick de set lai show tu false qua true, sau do truyen xuong children qua props
+            >     
+              <MenuIcon />
+            </IconButton>
+            <RouterLink to={`/`}>
+              <Typography
+                variant="h6"
+                color="secondary"
+                noWrap
+                className={classes.toolbarTitle}
+              >
                 KdShop
-            </Typography>
-          </RouterLink>
+              </Typography>
+            </RouterLink>
+            <Sidebar show={show} onSidebar={changeShow} />
+            {/* Sidebar la children, duoc truyen show{true} xuong  
+                changeShow() : la mot ham de truyen xuong component con, sau do component con se thong qua no va truyen lai 1 gia tri toi component cha 
+            */}
+            {/* <BackDrop /> */}
+          </nav>
           <div className={classes.grow} />
           <nav className={classes.nav}>
             <Button

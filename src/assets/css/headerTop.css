@@ -1,11 +1,10 @@
-.header-nav-link-res .top-menu a {
+
+.top-menu a {
     color: #777;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 300;
 }
-
-
 .top-menu {
     text-transform: uppercase;
     letter-spacing: -.01em;
@@ -46,10 +45,4 @@
 }
 .list-link-menu li a {
     padding: .5rem .6rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .header-nav-link {
-        display: none;
-    }
 }

@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import './ScrollArrow.css';
-
 
 
 function ScrollArrow() {
