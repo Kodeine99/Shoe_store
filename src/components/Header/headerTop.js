@@ -82,17 +82,23 @@ function NavBar() {
             </Button>
           </Typography>
           <nav className={classes.headerNavLinks}>
-            <Button color="default" className={classes.smallLink}>
+            <Button
+              color="default"
+              className={classes.smallLink}
+            >
               Call +84 123456789
             </Button>
             <Button
               color="default"
               className={classes.smallLink}
-                component={RouterLink} to="/About"
+              component={RouterLink} to="/About"
             >
               About Us
             </Button>
-            <Button color="default" className={classes.smallLink}>
+            <Button
+              color="default"
+              className={classes.smallLink}
+            >
               Contact Us
             </Button>
             <Button
@@ -114,10 +120,28 @@ function NavBar() {
                 <ExpandMoreIcon />
               </Button>
               <ul className="list-link-menu">
-                <li><a href="#phone">Call +0123456789</a></li>
-                <li><a href="#phone">About Us</a></li>
-                <li><a href="#phone">Contact Us</a></li>
-                <li><a href="#phone">Login</a></li>
+                <li>
+                  <RouterLink to="/" href="#phone">
+                    Call +0123456789
+                  </RouterLink >
+                </li>
+                <li>
+                  <RouterLink to="/About" href="#phone">
+                    About Us
+                  </RouterLink>
+                </li>
+                <li><RouterLink to="/" href="#phone">
+                  Contact Us
+                  </RouterLink >
+                </li>
+                <li>
+                  <RouterLink
+                    to="/"
+                    href="#phone"
+                    onClick= {() => handleOpen()}
+                  >Login
+                  </RouterLink>
+                </li>
               </ul>
             </ul>
           </nav>
