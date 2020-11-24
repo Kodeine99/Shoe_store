@@ -42,7 +42,7 @@ export default function TopSelling() {
       <React.Fragment>
         {
           products.filter(product => product.filter === 'topselling').map((product, index) => (
-            <Grid item md={4} sm={6}>
+            <Grid item lg={3} md={4} sm={6} style={{width: '100%'}}>
               <ProductCard
                 key={index}
                 addCart={() => addCart(product._id)}

@@ -13,8 +13,8 @@ import SliderIntro from './SliderIntro';
 
 export default function Carousel() {
   let carouselArr = [
-    <SliderIntro src={i1} title="Sneakers & Athletic Shoes" subtitle="Deals and Promotions" price="from $9.99" />,
     <SliderIntro src={i2} title="This Week's Most Wanted" subtitle="Trending Now" price="from $49.99" />,
+    <SliderIntro src={i1} title="Sneakers & Athletic Shoes" subtitle="Deals and Promotions" price="from $9.99" />,
     <SliderIntro src={i3} title="Can't-miss Clearance:" subtitle="Deals and Promotions" price="starting at 60% off" />
   ];
   const [x, setX] = useState(0);

@@ -14,18 +14,18 @@ import Footer from '../../components/Footer/Footer';
 function Home() {
     return (
         <>
-        <Container>
-            <SectionCarousel />
-            <SectionBannerGoup />
-            <SectionBoxes />
-            <SectionNewArrivals />
-            <SectionCategory />
-            <SectionTopSelling />
-            <SectionDeals />
-            <SectionBlogPosts />
-        </Container>
-        <SectionSubscribe />
-        <Footer />    
+            <Container>
+                <SectionCarousel />
+                <SectionBannerGoup />
+                <SectionBoxes />
+                <SectionNewArrivals />
+                <SectionCategory />
+                <SectionTopSelling />
+                <SectionDeals />
+                <SectionBlogPosts />
+            </Container>
+            <SectionSubscribe />
+            <Footer />    
         </>
     );
 }

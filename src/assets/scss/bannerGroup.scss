@@ -20,13 +20,7 @@
     // display: inline-block;
 }
 .banner1 {
-    padding: 0 8px 0 0;
     padding-bottom:16px;
-}
-.banner2 {
-    padding-bottom: 16px;
-    padding-left: 8px;
-
 }
 .bannerContainer {
     margin-top: 16px !important;
@@ -110,8 +104,35 @@
     line-height: 1.6rem;
     font-weight: 300;
 }
-.btnBlack {
+.banner-none {
+    display: none !important;
+}
 
+@media screen and (min-width: 576px) {
+    .banner-lg-block {
+        display: none !important;
+    }
+    .banner-sm-block {
+        display: block !important;
+    }
+    .banner-md-2 {
+        flex-wrap: unset !important;
+    }
+    .banner1 {
+        padding-right:8px;
+    }
+    .banner2 {
+        padding-left: 8px;
+        padding-bottom: 16px;
+    }
+}
+@media screen and (min-width: 769px) {
+    .banner-lg-block {
+        display: block !important;
+    }
+    .banner-md-2 {
+        flex-wrap: wrap !important;
+    }
 }
 
 @keyframes fixedHeader {

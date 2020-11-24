@@ -22,52 +22,52 @@ function Boxes() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-        <Grid container spacing={3} style={{margin: '0'}}>
-          <Grid item lg={3} md={6} sm={12} style={{position: 'relative'}}>
-            <div className="icon-box icon-box-side">
-              <span className="icon-box-icon">
-              <LocalShippingOutlinedIcon style={{fontSize: '3rem'}} />
-              </span>
-              <div className="icon-box-content">
-                <h3 className="icon-box-title">Free shipping</h3>
-                <p>Order $50 or more</p>
-              </div>
+      <Grid container spacing={2} style={{margin: '0'}} direction="row">
+        <Grid item md={3} sm={6} xs={12} style={{position: 'relative'}}>
+          <div className="icon-box icon-box-side">
+            <span className="icon-box-icon">
+            <LocalShippingOutlinedIcon style={{fontSize: '3rem'}} />
+            </span>
+            <div className="icon-box-content">
+              <h3 className="icon-box-title">Free shipping</h3>
+              <p>Order $50 or more</p>
             </div>
-          </Grid>
-          <Grid item lg={3} md={6} sm={12} style={{position: 'relative'}} className="seperator">
-            <div className="icon-box icon-box-side">
-              <span className="icon-box-icon">
-                <RotateLeftIcon style={{fontSize: '3rem'}} />
-              </span>
-              <div className="icon-box-content">
-                  <h3 className="icon-box-title">Free Returns</h3>
-                  <p>Within 30 days</p>
-              </div>
-            </div>
-          </Grid>
-          <Grid item lg={3} md={6} sm={12} style={{position: 'relative'}} className="seperator">
-            <div className="icon-box icon-box-side">
-              <span className="icon-box-icon">
-                <InfoOutlinedIcon style={{fontSize: '3rem'}} />
-              </span>
-              <div className="icon-box-content">
-                <h3 className="icon-box-title">Get 20% of 1 item</h3>
-                <p>When you sign up</p>
-              </div>
-            </div>
-          </Grid>
-          <Grid item lg={3} md={6} sm={12} style={{position: 'relative'}} className="seperator">
-            <div className="icon-box icon-box-side">
-              <span className="icon-box-icon">
-                <ContactSupportOutlinedIcon style={{fontSize: '3rem'}} />
-              </span>
-              <div className="icon-box-content">
-                <h3 className="icon-box-title">We support</h3>
-                <p>24/7 Amazing services</p>
-              </div>
-            </div>
-          </Grid>
+          </div>
         </Grid>
+        <Grid item md={3} sm={6} xs={12} style={{position: 'relative'}} className="seperator">
+          <div className="icon-box icon-box-side">
+            <span className="icon-box-icon">
+              <RotateLeftIcon style={{fontSize: '3rem'}} />
+            </span>
+            <div className="icon-box-content">
+                <h3 className="icon-box-title">Free Returns</h3>
+                <p>Within 30 days</p>
+            </div>
+          </div>
+        </Grid>
+        <Grid item md={3} sm={6} xs={12} style={{position: 'relative'}} className="seperator">
+          <div className="icon-box icon-box-side">
+            <span className="icon-box-icon">
+              <InfoOutlinedIcon style={{fontSize: '3rem'}} />
+            </span>
+            <div className="icon-box-content">
+              <h3 className="icon-box-title">Get 20% of 1 item</h3>
+              <p>When you sign up</p>
+            </div>
+          </div>
+        </Grid>
+        <Grid item md={3} sm={6} xs={12} style={{position: 'relative'}} className="seperator">
+          <div className="icon-box icon-box-side">
+            <span className="icon-box-icon">
+              <ContactSupportOutlinedIcon style={{fontSize: '3rem'}} />
+            </span>
+            <div className="icon-box-content">
+              <h3 className="icon-box-title">We support</h3>
+              <p>24/7 Amazing services</p>
+            </div>
+          </div>
+        </Grid>
+      </Grid>
     </div>
   );
 }

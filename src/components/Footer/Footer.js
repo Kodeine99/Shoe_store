@@ -34,7 +34,7 @@ function Footer() {
       <div className="footer-middle">
         <Container >
           <Grid container spacing={2}>
-            <Grid item xs={3}>
+            <Grid item md={3} sm={6} xs={12}>
               <div className="widget widget-about">
                 <Typography
                   color="secondary"
@@ -63,7 +63,7 @@ function Footer() {
                 </div>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item md={3} sm={6} xs={12}>
               <div className="widget">
                 <h4 className="widget-title">Useful Links</h4>
                 <ul className="widget-list">
@@ -75,7 +75,7 @@ function Footer() {
                 </ul>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item md={3} sm={6} xs={12}>
               <div className="widget">
                 <h4 className="widget-title">Customer Service</h4>
                 <ul className="widget-list">
@@ -87,7 +87,7 @@ function Footer() {
                 </ul>
               </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item md={3} sm={6} xs={12}>
               <div className="widget">
                 <h4 className="widget-title">My account</h4>
                 <ul className="widget-list">

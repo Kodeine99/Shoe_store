@@ -58,13 +58,13 @@
   padding:0 16px;
   border-radius:4px;
 }
-span {
+.side-bar span {
   margin-left: 16px !important;
 }
 .social-icons {
   display: flex;
   align-items: center;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   justify-content: center;
   /* margin: 32px 0 0 0; */
 }
@@ -189,4 +189,11 @@ span {
 }
 .back-drop.active {
   display: block;
+}
+
+
+@media screen and (min-width:400px) {
+  .social-icon:not(:last-child) {
+    margin-right: .5rem !important;
+  }
 }

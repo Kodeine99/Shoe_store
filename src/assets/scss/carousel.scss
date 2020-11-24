@@ -1,6 +1,5 @@
 .carousel {
     position: relative;
-    // border: 1px solid red;
     width: 100%;
     // height: 100vh;
     box-sizing: border-box;
@@ -56,31 +55,8 @@
     line-height: 1.1;
     margin-bottom: .2rem;
 }
-
-.intro-content {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    z-index: 10;
-    transform: translateY(-50%);
-    left: 100px;
-    font-weight: 500;
-
-    @extend %textWhite;
-}
-.intro-subtitle {
-    font-size: 1.4rem;
-    font-weight: 300;
-    margin: 0 0 10px 0;
-}
-.intro-title {
-    margin: 0 0 10px 0 ;
-}
-.intro-price {
-    font-weight: 300;
-}
 #btn {
-    min-width: 150px;
+    min-width: 90px;
     transition: all 0.3s;
     display: inline-flex;
     align-items: center;
