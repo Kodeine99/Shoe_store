@@ -65,7 +65,7 @@ function Sidebar(props) {
               ))
             }
           </ul>
-          <form action="#" mothod="get" className="mobile-search">
+          <form action="#" method="get" className="mobile-search">
             <label for="mobile-search" className="sr-only">Search</label>
             <input
               type="search"
@@ -79,21 +79,21 @@ function Sidebar(props) {
             </button>
           </form>
           <div className="social-icons">
-            <a className="social-icon" title="Facebook" href="#f">
+            <Link className="social-icon" title="Facebook" href="#f">
               <FaFacebook />
-            </a>
-            <a className="social-icon" title="Instagram" href="#f">
+            </Link>
+            <Link className="social-icon" title="Instagram" href="#f">
               <FaInstagram />
-            </a>
-            <a className="social-icon" title="Twitter" href="#f">
+            </Link>
+            <Link className="social-icon" title="Twitter" href="#f">
               <FaTwitter />
-            </a>
-            <a className="social-icon" title="Youtube" href="#f">
+            </Link>
+            <Link className="social-icon" title="Youtube" href="#f">
               <FaYoutube />
-            </a>
-            <a className="social-icon" title="Call" href="#f">
+            </Link>
+            <Link className="social-icon" title="Call" href="#f">
               <FaPhone />
-            </a>
+            </Link>
           </div>
         </nav>
         <div

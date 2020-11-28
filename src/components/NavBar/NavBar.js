@@ -139,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function NavBar(props) {
+function NavBar() {
   const classes = useStyles();
   const value = useContext(DataContext);
   const [cart] = value.cart;

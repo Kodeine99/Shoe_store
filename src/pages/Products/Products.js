@@ -1,32 +1,25 @@
-import React, {useContext} from 'react';
+import React, { useState, useContext } from 'react';
+import './Products.css';
 import { DataContext } from '../../contexts/DataProvider';
 
-import { Button, Container } from '@material-ui/core';
+import {
+  Container,
+  Typography,
+  Breadcrumbs,
+  Link,
+  Grid,
+  TextField,
+} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import FormControl from '@material-ui/core/FormControl';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Slider from '@material-ui/core/Slider';
-
-import { withStyles } from '@material-ui/core/styles';
-import MuiAccordion from '@material-ui/core/Accordion';
-import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
-import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Pagination from '@material-ui/lab/Pagination';
 
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import './Products.css';
+
 import ProductCard2 from "../../components/Card/ProductCard2";
 import Footer from "../../components/Footer/Footer";
+import SidebarProduct from '../../components/Sidebar/SidebarProduct';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -53,77 +46,18 @@ const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
   },
+  productSidebar_md: {
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
+    },
+  }
 }));
-const Accordion = withStyles({
-  root: {
-    boxShadow: 'none',
-    '&:not(:last-child)': {
-      borderBottom: 0,
-    },
-    '&:before': {
-      display: 'none',
-    },
-    '&$expanded': {
-      margin: 'auto',
-    },
-  },
-  expanded: {},
-})(MuiAccordion);
-
-const AccordionSummary = withStyles({
-  root: {
-    backgroundColor: 'rgba(0, 0, 0, 0)',
-    borderBottom: '1px solid rgba(0, 0, 0, .125)',
-    marginBottom: -1,
-    minHeight: 56,
-    '&$expanded': {
-      minHeight: 56,
-    },
-  },
-  content: {
-    '&$expanded': {
-      margin: '12px 0',
-    },
-  },
-  expanded: {},
-})(MuiAccordionSummary);
-
-const AccordionDetails = withStyles((theme) => ({
-  root: {
-    padding: theme.spacing(2),
-    display: 'block'
-  },
-}))(MuiAccordionDetails);
 
 const sortObtions = [
   { title: 'Most popular' },
   { title: 'Most rated' },
   { title: 'Date' },
 ];
-
-// Price set
-const prices = [
-  {
-    value: 0,
-    label: '$0',
-  },
-  {
-    value: 10,
-    label: '$100',
-  },
-  {
-    value: 50,
-    label: '$500',
-  },
-  {
-    value: 100,
-    label: '$1000'
-  }
-];
-function valuetext(value) {
-  return `$${value}`;
-};
-
 
 function Products() {
   const classes = useStyles();
@@ -147,10 +81,10 @@ function Products() {
         <div className="breadcrumb-nav">
           <Container className="breadcrumb-container">
             <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
-              <Link className="breadcumbs-icon" color="inherit" href="/">
+              <Link to="/" className="breadcumbs-icon" color="inherit">
                 <Typography color="inherit">Home</Typography>
               </Link>
-              <Link color="inherit" href="/getting-started">
+              <Link to="/products" color="inherit">
                 <Typography color="inherit">Products</Typography>
               </Link>
               <Typography color="textPrimary">Product</Typography>
@@ -160,118 +94,10 @@ function Products() {
         <div className="page-content">
           <Container>
             <Grid container spacing={2} justify="flex-start" direction="row">
-              <Grid item xs={4}>
-                <aside className="sidebar-shop">
-                  <div className="widget widget-clean">
-                    <label>Filters:</label>
-                    <Button variant="link" color="primary" className={classes.link}>
-                        Clear All
-                    </Button>
-                  </div>
-
-                  {/* Widget Collapse */}
-                  <div className="widget widget-collapsible">
-                    {/* Brand Filter */}
-                    <Accordion defaultExpanded={true}>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="brandpanel-content"
-                        id="brandpanel-header"
-                      >
-                        <Typography className={classes.heading}>Brand</Typography>
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        <FormControl component="brand-set" className={classes.formControl}>
-                          <FormGroup>
-                            <FormControlLabel
-                              control={<Checkbox name="nike" />}
-                              label="Nike"
-                            />
-                            <FormControlLabel
-                              control={<Checkbox name="adidas" />}
-                              label="Adidas"
-                            />
-                            <FormControlLabel
-                              control={<Checkbox name="converse" />}
-                              label="Converse"
-                            />
-                            <FormControlLabel
-                              control={<Checkbox name="puma" />}
-                              label="Puma"
-                            />
-                          </FormGroup>
-                        </FormControl>
-                      </AccordionDetails>
-                    </Accordion>
-
-                    {/* Size Filter */}
-                    <Accordion defaultExpanded={true}>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="sizepanel-content"
-                        id="sizepanel-header"
-                      >
-                        <Typography  className={classes.heading}>Size</Typography>
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        <FormControl component="size-set" className={classes.formControl}>
-                          <FormGroup>
-                            <FormControlLabel
-                              control={<Checkbox name="37" />}
-                              label="37"
-                            />
-                            <FormControlLabel
-                              control={<Checkbox name="38" />}
-                              label="38"
-                            />
-                            <FormControlLabel
-                              control={<Checkbox name="39" />}
-                              label="39"
-                            />
-                            <FormControlLabel
-                              control={<Checkbox name="40" />}
-                              label="40"
-                            />
-                            <FormControlLabel
-                              control={<Checkbox name="41" />}
-                              label="41"
-                            />
-                            <FormControlLabel
-                              control={<Checkbox name="42" />}
-                              label="42"
-                            />
-                          </FormGroup>
-                        </FormControl>
-                      </AccordionDetails>
-                    </Accordion>
-
-                    {/* Price Filter */}
-                    <Accordion defaultExpanded={true}>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="pricepanel-content"
-                        id="pricepanel-header"
-                      >
-                        <Typography className={classes.heading}>Price</Typography>
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        <Typography id="price-set" gutterBottom>
-                          Price Range: $0 - $1000
-                        </Typography>
-                        <Slider
-                          defaultValue={50}
-                          getAriaValueText={valuetext}
-                          aria-labelledby="price-set"
-                          step={5}
-                          // valueLabelDisplay={valuetext}
-                          marks={prices}
-                        />
-                      </AccordionDetails>
-                    </Accordion>
-                  </div>
-                </aside>
+              <Grid item lg={4} md={4} sm={12} xs={12} className={classes.productSidebar_md}>
+                <SidebarProduct />
               </Grid>
-              <Grid item xs={8}>
+              <Grid item lg={8} md={8} sm={12} xs={12}>
                 <div className="tool-box">
                   <div className="tool-box-left">
                     <div className="tool-box-info">
@@ -300,7 +126,7 @@ function Products() {
                   <Grid container spacing={2}>
                     {
                       products.map(product => (
-                        <Grid key={product._id} item xs={4}>
+                        <Grid key={product._id} item md={4} sm={4} xs={6}>
                           <ProductCard2
                             addCart={() =>addCart(product._id)}
                             productId={product._id}

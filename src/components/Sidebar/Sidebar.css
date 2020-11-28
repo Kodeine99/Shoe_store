@@ -5,7 +5,7 @@
   top: 0;
   bottom: 0;
   left: -400px;
-  width: 60%;
+  width: 70%;
   max-width: 400px;
   z-index: 1000;
   visibility: hidden;
@@ -190,7 +190,6 @@
 .back-drop.active {
   display: block;
 }
-
 
 @media screen and (min-width:400px) {
   .social-icon:not(:last-child) {

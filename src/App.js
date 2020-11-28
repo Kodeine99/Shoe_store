@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import 'fontsource-inter';
 import { DataProvider } from './contexts/DataProvider';
 
 import { MemoryRouter as Router } from 'react-router';
@@ -10,16 +11,12 @@ import Home from './pages/Home/Home';
 import Products from './pages/Products/Products';
 import ProductDetails from './pages/Products/ProductDetails/ProductDetails';
 import Cart from './pages/Cart/Cart';
-
 import HeaderTop from './components/Header/headerTop';
 import NavBar from './components/NavBar/NavBar';
-
-import 'fontsource-inter';
-// import Typography from '@material-ui/core/Typography';
-// import ProductsContainer from './components/pages/Products/ProductsContainer';
-import {Grid} from '@material-ui/core'
 import ScrollArrow from './components/ScrollArrow/ScrollArrow';
-// import LoginModal from './components/Modal/LoginModal';
+
+import { Grid } from '@material-ui/core';
+
 
 function App() {
   return (

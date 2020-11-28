@@ -40,7 +40,7 @@
 .about-img-front {
     position: relative;
     z-index: 2;
-    border: 2rem solid #f9f9f9;
+    border: 1rem solid #f9f9f9;
 }
 .about-img-back {
     position: absolute;

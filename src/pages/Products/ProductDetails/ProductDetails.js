@@ -49,12 +49,12 @@ function ProductDetails() {
             <div className="breadcrumb-nav">
               <Container className="breadcrumb-container">
                 <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
-                  <Link href="/" className="breadcumbs-icon" color="inherit" >
+                  <RouterLink to="/" className="breadcumbs-icon" color="inherit" >
                     <Typography color="inherit">Home</Typography>
-                  </Link>
-                  <Link color="inherit" href="/products">
+                  </RouterLink>
+                  <RouterLink color="inherit" to="/products">
                     <Typography color="inherit">Products</Typography>
-                  </Link>
+                  </RouterLink>
                   <Typography color="textPrimary">{product.title}</Typography>
                 </Breadcrumbs>
               </Container>
