@@ -129,3 +129,7 @@ a, button, img, input, span {
 .cart-table-content table tbody>tr td.product-remove {
     width: 100px;
 }
+
+@media screen and (max-width:990px) {
+    display: block !important;
+}

@@ -1,14 +1,9 @@
 import React from 'react';
+import './SignInUpForm.css';
 import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Link from '@material-ui/core/Link';
+import { TextField, Button, Checkbox, FormControlLabel, Link }from '@material-ui/core';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
-
-import './SignInUpForm.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,7 +21,11 @@ const useStyles = makeStyles((theme) => ({
   Link: {
     marginLeft: "auto",
     fontSize: '1rem',
-    width: 'auto'
+    width: 'auto',
+    [theme.breakpoints.down("sm")]: {
+      display: "inline-block",
+      justifyContent: "center"
+    },
   },
   paper: {
     padding: theme.spacing(2),
@@ -75,7 +74,11 @@ function LoginForm() {
           />}
           label="Remember Me"
         />
-        <Link className={classes.Link } href="#" onClick={preventDefault} color="inherit">
+        <Link
+          className={classes.Link}
+          href="#" onClick={preventDefault}
+          color="inherit"
+        >
           Forgot your password ?
         </Link>
       </div>

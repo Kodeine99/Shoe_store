@@ -12,3 +12,8 @@
     border-bottom: .1rem solid #ebebeb;
     margin-bottom: 2rem;
 }
+@media screen and (max-width:500px) {
+    .more-signin {
+        flex-wrap: wrap;
+    }
+}

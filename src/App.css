@@ -5,6 +5,7 @@ body.loaded {
 
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-header {
@@ -23,6 +24,7 @@ body.loaded {
     flex-direction: column;
     min-height: 100%;
     transition: transform 0.4s ease;
+    overflow: hidden;
 }
 .mmenu-active .page-wrapper {
   transform: translateX(200px);

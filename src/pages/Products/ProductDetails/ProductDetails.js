@@ -3,8 +3,6 @@ import { useParams } from 'react-router-dom';
 import { DataContext } from '../../../contexts/DataProvider';
 import { Link as RouterLink } from "react-router-dom";
 
-
-
 import './ProductDetails.css';
 
 import { Button, Container, Grid, Input } from '@material-ui/core';
@@ -24,8 +22,6 @@ import ProductSizes from './ProductSizes';
 import ProductImgCol from './ProductImgCol';
 import Footer from '../../../components/Footer/Footer';
 import ProductDetailsTab from './ProductDetailsTab';
-
-// import i from '../../assets/img/products/nike/product-1-1.jpg';
 
 
 function ProductDetails() {
@@ -63,7 +59,7 @@ function ProductDetails() {
               <Container>
                 <div className="details-page-top">
                   <Grid container spacing={2} >
-                    <Grid item xs={6}>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
                       <div className="product-gallery">
                         <figure className="product-main-img">
                           {/* <div style={{ userSelect: "none", cursor: "crosshair" }}> */}
@@ -84,7 +80,7 @@ function ProductDetails() {
                         <ProductImgCol images={product.images} setIndex={ setIndex } />
                       </div>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item lg={6} md={6} sm={12} xs={12}>
                       <div className="product-details">
                         <Typography
                           variant="h4"
@@ -114,7 +110,9 @@ function ProductDetails() {
                         </Typography>
                         <ProductSizes sizes={product.sizes}/>
                         <div className="product-details-quantity">
-                          <label className="product-quantity-label">Quantity:</label>
+                          <label className="product-quantity-label">
+                            Quantity:
+                          </label>
                           <ButtonGroup>
                             <Button
                               aria-label="reduce"

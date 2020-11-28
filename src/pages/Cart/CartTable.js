@@ -10,7 +10,7 @@ import './Cart.css';
 import './CartTable.css';
 
 
-export default function CartTable() {
+export default function CartTable(count) {
   const value = useContext(DataContext);
   const [cart, setCart] = value.cart;
   const [total, setTotal] = useState(0);
@@ -59,6 +59,7 @@ export default function CartTable() {
 
   return (
     <div className="cart-table">
+      <Container>
       <div className="cart-table-content table-responsive">
         <table>
           <thead>
@@ -129,20 +130,21 @@ export default function CartTable() {
             }
           </tbody>
         </table>
-      </div>
+        </div>
+      </Container>
       <div className="cart-summary">
           <Container>
             <h2 className="cart-summary-title">Cart total</h2>
             <Grid container spacing={4}>
-              <Grid item xs={4}>
+              <Grid item lg={4} md={4} sm={12} xs={12}>
                 <h3 className="cart-summary-subtitle">SubTotal</h3>
                 <span>${total }.00</span>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item lg={4} md={4} sm={12} xs={12}>
                 <h3 className="cart-summary-shipping">Shipping</h3>
                 <span>Free shipping</span>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item lg={4} md={4} sm={12} xs={12}>
                 <h3 className="cart-summary-total">Total: ${total}.00</h3>
                 <Button variant="outlined" color="secondary">Proceed to checkout</Button>
               </Grid>

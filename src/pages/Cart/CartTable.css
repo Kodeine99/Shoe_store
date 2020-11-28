@@ -11,3 +11,40 @@ h2.cart-summary-title {
 .cart-summary-total {
     color: rgb(238, 56, 56);
 }
+@media screen and (max-width:500px) {
+    .table-responsive tbody {
+        display: block !important;
+        width: 100% !important;
+    }
+    .table-responsive tr {
+        display: block !important;
+        width: 100% !important;
+        /* border-bottom: none !important; */
+    }
+    .table-responsive tr:last-child) {
+        border-bottom: none !important;
+    }
+    .table-responsive td {
+        display: block !important;
+        width: 100% !important;
+        border-bottom: none !important;
+        padding: 10px 0 !important; 
+    }
+    .table-responsive td.product-thumbnail {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .table-responsive {
+        border: .1rem solid #ebebeb;
+        width: 100%;
+        display: block;
+    }
+    .table-responsive thead {
+        display: none;
+    }
+    .cart-table-content table tbody>tr td {
+        padding: 10px 0 10px 10px;
+    }
+}

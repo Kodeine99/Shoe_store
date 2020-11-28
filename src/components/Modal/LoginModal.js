@@ -19,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
     minWidth: 500,
+    [theme.breakpoints.down("sm")]: {
+      minWidth: "200px !important",
+      margin: ".4rem"
+    },
+
   },
   modal: {
     display: 'flex',
@@ -69,9 +74,6 @@ function LoginModal(props) {
 
   return (
     <div>
-      {/* <button type="button" onClick={handleOpen}>
-        react-transition-group
-      </button> */}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
