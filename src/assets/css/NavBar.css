@@ -368,3 +368,9 @@ a {
     justify-content: space-between;
     padding: 0 0 .5rem;
 }
+
+@media (max-width:990px) {
+    .cart-dropdown .cart-dropdown-menu{
+        display: none;
+    }
+}

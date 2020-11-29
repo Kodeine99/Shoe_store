@@ -136,15 +136,15 @@ export default function CartTable(count) {
           <Container>
             <h2 className="cart-summary-title">Cart total</h2>
             <Grid container spacing={4}>
-              <Grid item lg={4} md={4} sm={12} xs={12}>
+              <Grid item lg={4} md={4} sm={6} xs={12}>
                 <h3 className="cart-summary-subtitle">SubTotal</h3>
                 <span>${total }.00</span>
               </Grid>
-              <Grid item lg={4} md={4} sm={12} xs={12}>
+              <Grid item lg={4} md={4} sm={6} xs={12}>
                 <h3 className="cart-summary-shipping">Shipping</h3>
                 <span>Free shipping</span>
               </Grid>
-              <Grid item lg={4} md={4} sm={12} xs={12}>
+              <Grid item lg={4} md={4} sm={6} xs={12}>
                 <h3 className="cart-summary-total">Total: ${total}.00</h3>
                 <Button variant="outlined" color="secondary">Proceed to checkout</Button>
               </Grid>

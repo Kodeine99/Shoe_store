@@ -1,0 +1,53 @@
+.about-testimonials {
+    background-color: #f9f9f9 !important;
+    padding: 2rem;
+}
+.about-testimonials blockquote {
+    color: #666;
+    /* max-width: 850px; */
+    margin-left: auto;
+    margin-right: auto;
+    font-style: normal;
+    line-height: 1.875;
+}
+.text-center {
+    text-align: center!important;
+}
+blockquote {
+    position: relative;
+    margin: 0 0 4.2rem;
+    padding: 0;
+    color: #777;
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 1.625;
+}
+.testimonial img {
+    display: inline-block !important;
+    max-width: 70px;
+    border-radius: 50%;
+    margin-top: 1rem;
+    margin-bottom: 2.1rem;
+}
+blockquote cite {
+    font-style: normal;
+    font-weight: 500;
+    color: #333333;
+    letter-spacing: -.01em;
+    line-height: 1;
+}
+blockquote cite span {
+    display: block;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+.text-content {
+    /* padding: 0 5rem; */
+}
+
+
+@media screen and(max-width:500px) {
+    .text-content {
+        padding: 0;
+    }
+}

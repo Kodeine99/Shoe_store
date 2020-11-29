@@ -9,6 +9,7 @@ import background from '../../assets/img/backgrounds/page-background-2.jpeg';
 import aboutImg1 from '../../assets/img/aboutus/about-1.jpg';
 import aboutImg2 from '../../assets/img/aboutus/about-2.jpg';
 import OurTeam from './OurTeam';
+import CustomerSay from './CustomerSay';
 
   
 function AboutUs() {
@@ -98,6 +99,7 @@ function AboutUs() {
         <Container>
           <OurTeam />
         </Container>
+        <CustomerSay />
         <Footer />
       </div>
     </>
