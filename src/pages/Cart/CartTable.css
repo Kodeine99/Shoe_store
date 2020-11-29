@@ -11,6 +11,7 @@ h2.cart-summary-title {
 .cart-summary-total {
     color: rgb(238, 56, 56);
 }
+
 @media screen and (max-width:500px) {
     .table-responsive tbody {
         display: block !important;
@@ -21,7 +22,7 @@ h2.cart-summary-title {
         width: 100% !important;
         /* border-bottom: none !important; */
     }
-    .table-responsive tr:last-child) {
+    .table-responsive tr:last-child {
         border-bottom: none !important;
     }
     .table-responsive td {
