@@ -91,9 +91,9 @@ function NavBar() {
             <Button
               color="default"
               className={classes.smallLink}
-              component={RouterLink} to="/About"
+              component={RouterLink} to="/Blog"
             >
-              About Us
+              Blog
             </Button>
             <Button
               color="default"
@@ -121,23 +121,22 @@ function NavBar() {
               </Button>
               <ul className="list-link-menu">
                 <li>
-                  <RouterLink to="/" href="#phone">
+                  <RouterLink to="/">
                     Call +0123456789
                   </RouterLink >
                 </li>
                 <li>
-                  <RouterLink to="/About" href="#phone">
-                    About Us
+                  <RouterLink to="/Blog">
+                   Blog
                   </RouterLink>
                 </li>
-                <li><RouterLink to="/" href="#phone">
+                <li><RouterLink to="/" >
                   Contact Us
                   </RouterLink >
                 </li>
                 <li>
                   <RouterLink
                     to="/"
-                    href="#phone"
                     onClick= {() => handleOpen()}
                   >Login
                   </RouterLink>

@@ -25,7 +25,7 @@ import CartDropdown from "./CartDropdown";
 import Sidebar from '../Sidebar/Sidebar';
 import MegaMenu from "./Megamenu";
 // import MegaMenuSm from './MegaMenuSm';
-import MegamenuMin from "./MegaMenuMin";
+// import MegamenuMin from "./MegaMenuMin";
 
 
 const StyledBadge = withStyles((theme) => ({
@@ -226,13 +226,11 @@ function NavBar() {
               id="btn-hv"
               color="default"
               className={classes.link}
-              endIcon={<KeyboardArrowDownIcon />}
               component={RouterLink}
-              to="/Blogs"
+              to="/About"
               position="relative"
             >
-              Blog
-              <MegamenuMin />
+              About Us
             </Button>
           </nav>
           <div className={classes.search}>
