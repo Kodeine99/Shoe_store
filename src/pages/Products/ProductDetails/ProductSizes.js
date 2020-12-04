@@ -1,17 +1,21 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
+import {Button, TextField} from '@material-ui/core';
+
+import Autocomplete from '@material-ui/lab/Autocomplete';
+
 
 function ProductSizes({sizes}) {
   return (
     <div className="product-details-sizes">
-      <label className="product-size-label">Size:</label>
       {
-        sizes.map((size,index) => (
-          <Button className="product-size-btn" key={index} variant="outlined">
-            {size}
-          </Button>
-        ))
+        <Autocomplete
+          options={sizes}
+          id="size"
+          debug
+          style={{ width: 200 }}
+          renderInput={(params) => <TextField {...params} label="size" margin="normal" />}
+        />
       }
     </div>
   );

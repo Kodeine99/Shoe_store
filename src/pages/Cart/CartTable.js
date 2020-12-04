@@ -4,8 +4,12 @@ import { DataContext } from '../../contexts/DataProvider';
 import { Link, Container, Button } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+
 
 import ClearIcon from '@material-ui/icons/Clear';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+
 import './Cart.css';
 import './CartTable.css';
 
@@ -88,7 +92,16 @@ export default function CartTable(count) {
                   <td className="product-name">
                     <Link href="#">{product.title }</Link>
                     <div className="cart-item-variantion">
-                      <span>Size: { product.size }</span>
+                      <span>
+                        {/* Size: {product.size} */}
+                        <Autocomplete
+                          options={product.sizes}
+                          id="size"
+                          debug
+                          style={{width:100, margin: 'auto'}}
+                          renderInput={(params) => <TextField {...params} label="size" margin="normal" />}
+                        />
+                      </span>
                     </div>
                   </td>
                   <td className="product-price-cart">
