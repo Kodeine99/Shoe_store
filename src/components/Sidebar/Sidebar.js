@@ -29,8 +29,8 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Blogs',
-    path: '/Blogs',
+    title: 'About Us',
+    path: '/About',
     icon: <MdSpeakerNotes />,
     cName: 'nav-text'
   }

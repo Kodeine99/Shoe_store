@@ -96,13 +96,14 @@ function NavBar() {
               Blog
             </Button>
             <Button
+              component={RouterLink} to="/Contact"
               color="default"
               className={classes.smallLink}
             >
               Contact Us
             </Button>
             <Button
-            href="#"
+            href="#login"
             color="primary"
             className={classes.smallLink}
             startIcon={<AccountCircleIcon />}
@@ -130,7 +131,7 @@ function NavBar() {
                    Blog
                   </RouterLink>
                 </li>
-                <li><RouterLink to="/" >
+                <li><RouterLink to="/Contact" >
                   Contact Us
                   </RouterLink >
                 </li>

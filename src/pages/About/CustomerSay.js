@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 export default function CustomArrows() {
   const classes = useStyles();
   const settings = {
+      arrows: false,
       dots: true,
       infinite: true,
       slidesToShow: 1,
@@ -45,12 +46,12 @@ export default function CustomArrows() {
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
       responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          dots: true
-        }
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            dots: true
+          }
         },
       ]
     };

@@ -41,7 +41,7 @@ function Footer() {
                   className={classes.logo}
                   variant="h4"
                   gutterBottom>
-                  KDShop
+                  KDShoes
                 </Typography>
                 <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. </p>
                 <div className="social-icons">
@@ -67,8 +67,8 @@ function Footer() {
               <div className="widget">
                 <h4 className="widget-title">Useful Links</h4>
                 <ul className="widget-list">
-                  <li><a href="/#">About KdShop</a></li>
-                  <li><a href="/#">How to shop on KdShop</a></li>
+                  <li><a href="/#">About KdShoes</a></li>
+                  <li><a href="/#">How to shop on KdShoes</a></li>
                   <li><a href="/#">FAQ</a></li>
                   <li><a href="/#">Contact Us</a></li>
                   <li><a href="/#">Login</a></li>

@@ -191,14 +191,13 @@ function NavBar() {
                 noWrap
                 className={classes.toolbarTitle}
               >
-                KdShop
+                KdShoes
               </Typography>
             </RouterLink>
             <Sidebar show={show} onSidebar={changeShow} />
             {/* Sidebar la children, duoc truyen show{true} xuong  
                 changeShow() : la mot ham de truyen xuong component con, sau do component con se thong qua no va truyen lai 1 gia tri toi component cha 
             */}
-            {/* <BackDrop /> */}
           </nav>
           <div className={classes.grow} />
           <nav className={classes.nav}>
