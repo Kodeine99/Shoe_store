@@ -19,8 +19,7 @@ function Blogs() {
 
 	const value = useContext(BlogContext);
 	const [blogs] = value.blogs;
-	console.log(blogs)
-
+	
 	return (
 		<>
 			<div className="main">
