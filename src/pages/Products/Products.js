@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './Products.css';
 import { DataContext } from '../../contexts/DataProvider';
 
+// Material-UI component
 import {
   Container,
   Typography,
@@ -9,14 +10,14 @@ import {
   Link,
   Grid,
   TextField,
+  makeStyles,
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Pagination from '@material-ui/lab/Pagination';
 
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
+// Components
 import ProductCard2 from "../../components/Card/ProductCard2";
 import Footer from "../../components/Footer/Footer";
 import SidebarProduct from '../../components/Sidebar/SidebarProduct';
@@ -69,7 +70,7 @@ function Products() {
 
   return (
     <div className="products-page">
-        <div className="main">
+      <div className="main">
         <div className="page-header text-center">
           <Container>
             <h1 className="page-title">

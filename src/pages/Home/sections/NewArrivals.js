@@ -1,12 +1,20 @@
 import React, { useState, useContext } from 'react';
+
+// Context
 import { DataContext } from '../../../contexts/DataProvider';
+
+// css
 import '../../../assets/css/NewArrivals.css';
+
+// Slick
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+// Components
 import ProductCard from "../../../components/Card/ProductCard";
 
+// Material-UI Components
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
@@ -87,7 +95,7 @@ export default function NewArrivals() {
                   addCart={() =>addCart(product._id)}
                   productId={product._id}
                   title={product.title}
-                  src={ `${process.env.PUBLIC_URL}${product.images[0]}`}
+                  src={`${process.env.PUBLIC_URL}${product.images[0]}`}
                   price={product.price}
                   oldPrice={product.oldPrice}
                   cont1={product.categories[0]}

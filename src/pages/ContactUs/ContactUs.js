@@ -1,14 +1,15 @@
 import React from 'react';
-import { Container, Link, Breadcrumbs, Typography, Grid, Button, TextField, TextareaAutosize} from '@material-ui/core';
 import './ContactUs.css';
 
+// Material-UI Components
+import { Container, Link, Breadcrumbs, Typography, Grid, Button, TextField, TextareaAutosize} from '@material-ui/core';
 
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { MdLocationOn, MdAccessTime, MdPhone, MdEmail, MdEvent, } from "react-icons/md";
-import { GoLocation } from "react-icons/go";
-
 
 import background from '../../assets/img/backgrounds/page-background-3.jpg';
+
+// Components
 import Footer from '../../components/Footer/Footer';
 
 

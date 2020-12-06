@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {BlogContext} from '../../../contexts/BlogsProvider';
+
 import '../../../assets/css/BlogPosts.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -13,6 +15,9 @@ import BlogCard from "../../../components/Card/BlogCard";
 
 
 export default function BlogPosts() {
+  const value = useContext(BlogContext);
+	const [blogs] = value.blogs;
+  
   const settings = {
     dots: false,
     useCSS: true,
@@ -62,10 +67,18 @@ export default function BlogPosts() {
       <div className="tab-content tab-content-carousel">
         <div>
           <Slider {...settings}>
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
+            {
+              blogs.slice(0,4).map(blog => {
+                return (
+                  <BlogCard
+                    title={blog.title}
+                    image= {`${process.env.PUBLIC_URL}${blog.images}`}
+                    content={blog.content}
+                    createDate={blog.createDate}
+                  />
+                )
+              })
+            }
           </Slider>
         </div>
         <div className="more-articles">
