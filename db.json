@@ -27,7 +27,7 @@
   ],
   "products": [
     {
-      "_id": "1",
+      "id": 1,
       "title": "Nike Zoom '92",
       "images": [
         "img/products/nike/product-1-1-1.jpg",
@@ -53,7 +53,7 @@
       "filter": "topselling"
     },
     {
-      "_id": "2",
+      "id": 2,
       "title": "Nike Blazer Mid '77 Vintage",
       "images": [
         "img/products/nike/product-3-1.jpg",
@@ -77,7 +77,7 @@
       "filter": "topselling"
     },
     {
-      "_id": "3",
+      "id": 3,
       "title": "Air Jordan 3 Retro SE",
       "images": [
         "img/products/nike/product-2-1.jpg",
@@ -102,7 +102,7 @@
       "filter": ""
     },
     {
-      "_id": "4",
+      "id": 4,
       "title": "Adidas Ultra Boots new",
       "images": [
         "img/products/adidas/product-1-1.jpg",
@@ -127,8 +127,8 @@
       "filter": "topselling"
     },
     {
-      "_id": "5",
-      "title": "X ghosted Tuft 16.2",
+      "id": 5,
+      "title": "Nike SuperRep Go 2",
       "images": [
         "img/products/adidas/product-2-1.jpg",
         "img/products/adidas/product-1-2.jpg",
@@ -136,7 +136,7 @@
         "img/products/adidas/product-1-4.jpg"
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "categoryId": 2,
+      "categoryId": 1,
       "sizes": [
         "38",
         "39",
@@ -144,15 +144,15 @@
         "41",
         "42"
       ],
-      "price": 109,
+      "price": 129,
       "oldPrice": 199,
       "count": 1,
       "createAt": 1618286374985,
-      "updateAt": 1618286374985,
+      "updateAt": 1618318791629,
       "filter": "topselling"
     },
     {
-      "_id": "6",
+      "id": 6,
       "title": "Converse Chuck Taylor All Star 1970s Rival",
       "images": [
         "img/products/converse/product-1-1.jpg",
@@ -177,7 +177,7 @@
       "filter": "topselling"
     },
     {
-      "_id": "7",
+      "id": 7,
       "title": "Converse Chuck Taylor All Star 1970s Renew ",
       "images": [
         "img/products/converse/product-2-1.jpg",
@@ -203,7 +203,7 @@
       "filter": "topselling"
     },
     {
-      "_id": "8",
+      "id": 8,
       "title": "Clyde All-Pro Basketball Shoes",
       "images": [
         "img/products/puma/product-1-1.jpg",
@@ -228,7 +228,7 @@
       "filter": ""
     },
     {
-      "_id": "9",
+      "id": 9,
       "title": "RS-X 8W Men's Sneakers",
       "images": [
         "img/products/puma/product-2-1.jpg",
@@ -253,40 +253,85 @@
       "filter": ""
     },
     {
-      "_id": "10",
-      "title": "NMD_R1 Crystal White",
+      "id": 10,
+      "title": "Nike SuperRep Go 2",
       "images": [
         "img/products/adidas/NMD_Crystal_01.jpg",
         "img/products/adidas/NMD_Crystal_02.jpg",
         "img/products/adidas/product-1-3.jpg",
         "img/products/adidas/product-1-4.jpg"
       ],
-      "description":
-        "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "categoryId": 2,
-      "sizes": ["38", "39", "40", "41", "42"],
-      "price": 50,
+      "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
+      "categoryId": 1,
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "price": 59,
       "oldPrice": 159,
       "count": 1,
-      "filter": ""
+      "filter": "",
+      "updateAt": 1618321800863,
+      "createdAt": 1618321764137
     },
     {
-      "_id": "11",
-      "title": "NMD_R1 Pride",
+      "id": 11,
+      "title": "Nike SuperRep Go 2",
       "images": [
         "img/products/adidas/NMD_R1_Pride_01.jpg",
         "img/products/adidas/NMD_R1_Pride_02.jpg",
         "img/products/adidas/product-1-3.jpg",
         "img/products/adidas/product-1-4.jpg"
       ],
-      "description":
-        "ĐÔI GIÀY ĐẶC TRƯNG DÀNH CHO NHỮNG AI KHÔNG NGẠI THỂ HIỆN BẢN THÂN.",
-      "categories": ["adidas", "men", "women"],
-      "sizes": ["38", "39", "40", "41", "42"],
-      "price": 50,
+      "description": "ĐÔI GIÀY ĐẶC TRƯNG DÀNH CHO NHỮNG AI KHÔNG NGẠI THỂ HIỆN BẢN THÂN.",
+      "categories": [
+        "adidas",
+        "men",
+        "women"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "price": 99,
       "oldPrice": 159,
       "count": 1,
-      "filter": ""
+      "filter": "",
+      "categoryId": 1,
+      "createdAt": 1618321764137,
+      "updateAt": 1618321828153
+    },
+    {
+      "title": "Nike SuperRep Go 2",
+      "images": [
+        "img/products/nike/Nike_SuperepGo2_01.jpeg",
+        "img/products/nike/Nike_SuperepGo2_02.png",
+        "img/products/nike/Nike_SuperepGo2_03.jpg",
+        "img/products/nike/Nike_SuperepGo2_04.jpg"
+      ],
+      "description": "The Nike SuperRep Go 2 combines lightweight cushioning underfoot and breathable mesh up top to get you moving comfortably in circuit-based fitness classes or while streaming workouts at home. With the supportive arc on the side and extra flexibility in the sole, you're ready to go for 1 more rep.",
+      "categoryId": 1,
+      "sizes": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "price": 99,
+      "oldPrice": 199,
+      "count": 1,
+      "filter": "topselling",
+      "createdAt": 1618311653942,
+      "updateAt": 1618311653942,
+      "id": 12
     }
   ]
 }

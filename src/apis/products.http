@@ -27,18 +27,41 @@ GET {{baseUrl}}/products?_sort=price&_order=asc
 POST {{baseUrl}}/products
 Content-Type: application/json
 
-{
-  "name": "Ananas"
+{  
+  "title": "Nike SuperRep Go 2",
+  "images": [
+    "img/products/nike/Nike_SuperepGo2_01.jpeg",
+    "img/products/nike/Nike_SuperepGo2_02.png",
+    "img/products/nike/Nike_SuperepGo2_03.jpg",
+    "img/products/nike/Nike_SuperepGo2_04.jpg"
+  ],
+  "description": "The Nike SuperRep Go 2 combines lightweight cushioning underfoot and breathable mesh up top to get you moving comfortably in circuit-based fitness classes or while streaming workouts at home. With the supportive arc on the side and extra flexibility in the sole, you're ready to go for 1 more rep.",
+  "categoryId": 1,
+  "sizes": [
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42"
+  ],
+  "price": 99,
+  "oldPrice": 199,
+  "count": 1,
+  "filter": "topselling"
 }
 
 ###
 
 # @name updateProduct
-PATCH  {{baseUrl}}/products/5
+PATCH  {{baseUrl}}/products/10
 Content-Type: application/json
 
-{
-  "name": "Ananas"
+{  
+  "title": "Nike SuperRep Go 2",
+  "categoryId": 1,
+  "createdAt": 1618321764137,
+  "price": 59
 }
 
 ###
