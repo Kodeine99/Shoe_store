@@ -1,0 +1,48 @@
+//Variables
+@baseUrl = http://localhost:6969/api
+
+
+// Get products
+
+# @name getAllproducts
+GET {{baseUrl}}/products
+
+###
+
+# @name filterByCategory
+GET {{baseUrl}}/products?categoryId=2
+
+###
+
+# @name pagination
+GET {{baseUrl}}/products?_page=1&_limit=2
+
+###
+
+GET {{baseUrl}}/products?_sort=price&_order=asc
+
+###
+
+# @name addNewProduct
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+  "name": "Ananas"
+}
+
+###
+
+# @name updateProduct
+PATCH  {{baseUrl}}/products/5
+Content-Type: application/json
+
+{
+  "name": "Ananas"
+}
+
+###
+
+# @name deleteProduct
+DELETE {{baseUrl}}/products/5
+
