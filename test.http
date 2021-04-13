@@ -1,0 +1,34 @@
+//Variables
+@baseUrl = http://localhost:6969/api
+
+
+// Get Categories
+
+# @name getAllCategories
+GET {{baseUrl}}/categories
+
+###
+
+# @name addNewCategory
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "Ananas"
+}
+
+###
+
+# @name updateCategory
+PATCH  {{baseUrl}}/categories/5
+Content-Type: application/json
+
+{
+  "name": "Ananas"
+}
+
+###
+
+# @name deleteCategory
+DELETE {{baseUrl}}/categories/5
+
