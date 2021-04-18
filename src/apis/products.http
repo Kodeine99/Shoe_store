@@ -54,14 +54,14 @@ Content-Type: application/json
 ###
 
 # @name updateProduct
-PATCH  {{baseUrl}}/products/10
+PATCH  {{baseUrl}}/products/11
 Content-Type: application/json
 
 {  
   "title": "Nike SuperRep Go 2",
   "categoryId": 1,
   "createdAt": 1618321764137,
-  "price": 59
+  "price": 99
 }
 
 ###
