@@ -14,11 +14,11 @@ import ProductCard from '../../../components/Card/ProductCard';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "#f8f8f869",
-    padding: "50px 0"
+    backgroundColor: '#f8f8f869',
+    padding: '50px 0',
   },
   marAuto: {
-    margin: "auto",
+    margin: 'auto',
   },
   button: {
     margin: theme.spacing(1),
@@ -40,42 +40,42 @@ export default function TopSelling() {
   function FormRow() {
     return (
       <React.Fragment>
-        {
-          products.filter(product => product.filter === 'topselling').map((product, index) => (
-            <Grid item lg={3} md={4} sm={6} style={{width: '100%'}}>
+        {products
+          .filter((product) => product.filter === 'topselling')
+          .map((product, index) => (
+            <Grid item lg={3} md={4} sm={6} style={{ width: '100%' }}>
               <ProductCard
                 key={index}
-                addCart={() => addCart(product._id)}
-                productId={product._id}
+                addCart={() => addCart(product.id)}
+                productId={product.id}
                 title={product.title}
                 src={`${process.env.PUBLIC_URL}${product.images[0]}`}
                 price={product.price}
                 oldPrice={product.oldPrice}
-                cont1={product.categories[0]}
-                cont2={product.categories[1]}
+                // cont1={product.categories[0]}
+                // cont2={product.categories[1]}
               />
             </Grid>
-          ))
-        }
+          ))}
       </React.Fragment>
     );
   }
   return (
     <div className={classes.root}>
       <div className="heading">
-      <h1 className="heading-title">Top Selling Products</h1>
+        <h1 className="heading-title">Top Selling Products</h1>
         <div>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          centered
-        >
-          <Tab label="All" />
-          <Tab label="Women's" />
-          <Tab label="Men's" />
-        </Tabs>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            indicatorColor="primary"
+            textColor="primary"
+            centered
+          >
+            <Tab label="All" />
+            <Tab label="Women's" />
+            <Tab label="Men's" />
+          </Tabs>
         </div>
       </div>
       <Grid container spacing={1}>
@@ -87,9 +87,9 @@ export default function TopSelling() {
         <Button
           variant="outlined"
           id="btn-more"
-          endIcon={< ArrowForwardIcon className="arrow-icon"/>}
+          endIcon={<ArrowForwardIcon className="arrow-icon" />}
         >
-          View More Products 
+          View More Products
         </Button>
       </div>
     </div>

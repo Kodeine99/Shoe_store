@@ -10,7 +10,6 @@ import Box from '@material-ui/core/Box';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -26,7 +25,7 @@ function TabPanel(props) {
       )}
     </div>
   );
-};
+}
 
 function a11yProps(index) {
   return {
@@ -44,8 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ProductDetailsTab({description}) {
-
+function ProductDetailsTab({ description }) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -55,7 +53,9 @@ function ProductDetailsTab({description}) {
   return (
     <div className={classes.root}>
       <AppBar
-        style={{ boxShadow: 'none', color: '#333', backgroundColor: 'transparent' }} position="static">
+        style={{ boxShadow: 'none', color: '#333', backgroundColor: 'transparent' }}
+        position="static"
+      >
         <Tabs
           indicatorColor="primary"
           centered
@@ -63,8 +63,8 @@ function ProductDetailsTab({description}) {
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Tab label="Description"  {...a11yProps(2)} />
-          <Tab label="Shipping & Return"  {...a11yProps(2)} />
+          <Tab label="Description" {...a11yProps(2)} />
+          <Tab label="Shipping & Return" {...a11yProps(2)} />
           <Tab label="Reviews (0)" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
@@ -90,5 +90,5 @@ TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
-};  
+};
 export default ProductDetailsTab;

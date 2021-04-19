@@ -18,10 +18,9 @@ import Pagination from '@material-ui/lab/Pagination';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 // Components
-import ProductCard2 from "../../components/Card/ProductCard2";
-import Footer from "../../components/Footer/Footer";
+import ProductCard2 from '../../components/Card/ProductCard2';
+import Footer from '../../components/Footer/Footer';
 import SidebarProduct from '../../components/Sidebar/SidebarProduct';
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,32 +36,28 @@ const useStyles = makeStyles((theme) => ({
     color: '#1cc0a0',
     fontWeight: '400',
     fontSize: '.8rem',
-    marginLeft: 'auto'
+    marginLeft: 'auto',
   },
   heading: {
     fontSize: theme.typography.pxToRem(20),
     fontWeight: theme.typography.fontWeightRegular,
-    color: '#000'
+    color: '#000',
   },
   formControl: {
     margin: theme.spacing(1),
   },
   productSidebar_md: {
-    [theme.breakpoints.down("sm")]: {
-      display: "block",
+    [theme.breakpoints.down('sm')]: {
+      display: 'block',
     },
-  }
+  },
 }));
 
-const sortObtions = [
-  { title: 'Most popular' },
-  { title: 'Most rated' },
-  { title: 'Date' },
-];
+const sortObtions = [{ title: 'Most popular' }, { title: 'Most rated' }, { title: 'Date' }];
 
 function Products() {
   const classes = useStyles();
-  
+
   const value = useContext(DataContext);
   const [products] = value.products;
   // console.log(products)
@@ -113,38 +108,40 @@ function Products() {
                         id="sortby"
                         options={sortObtions}
                         getOptionLabel={(option) => option.title}
-                        style={{ width: 240,}}
-                        renderInput={(params) => <TextField {...params} label="Sort by" variant="outlined" />}
+                        style={{ width: 240 }}
+                        renderInput={(params) => (
+                          <TextField {...params} label="Sort by" variant="outlined" />
+                        )}
                         size="small"
                       />
                     </div>
-                    <div className="tool-box-layout">
-
-                    </div>
+                    <div className="tool-box-layout"></div>
                   </div>
                 </div>
                 <div className="products">
                   <Grid container spacing={2}>
-                    {
-                      products.map(product => (
-                        <Grid key={product._id} item md={4} sm={4} xs={6}>
-                          <ProductCard2
-                            addCart={() =>addCart(product._id)}
-                            productId={product._id}
-                            title={product.title}
-                            src={ `${process.env.PUBLIC_URL}${product.images[0]}`}
-                            price={product.price}
-                            oldPrice={product.oldPrice}
-                            cont1={product.categories[0]}
-                            cont2={product.categories[1]}
-                          />
-                        </Grid>
-                      ))
-                    }
+                    {products.map((product) => (
+                      <Grid key={product.id} item md={4} sm={4} xs={6}>
+                        <ProductCard2
+                          addCart={() => addCart(product.id)}
+                          productId={product.id}
+                          title={product.title}
+                          src={`${process.env.PUBLIC_URL}${product.images[0]}`}
+                          price={product.price}
+                          oldPrice={product.oldPrice}
+                          tag1={product.tags[0]}
+                          tag2={product.tags[1]}
+                        />
+                      </Grid>
+                    ))}
                   </Grid>
                 </div>
                 <div className="pagination-container">
-                  <Pagination style={{display: 'flex', justifyContent: 'center'}} count={3} color="primary" />
+                  <Pagination
+                    style={{ display: 'flex', justifyContent: 'center' }}
+                    count={3}
+                    color="primary"
+                  />
                 </div>
               </Grid>
             </Grid>
@@ -152,7 +149,7 @@ function Products() {
         </div>
       </div>
       <Footer />
-    </div> 
+    </div>
   );
 }
 
