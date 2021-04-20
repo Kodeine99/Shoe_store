@@ -60,7 +60,6 @@ function Products() {
 
   const value = useContext(DataContext);
   const [products] = value.products;
-  // console.log(products)
   const addCart = value.addCart;
 
   return (

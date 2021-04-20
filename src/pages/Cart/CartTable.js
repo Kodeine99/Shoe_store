@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../contexts/DataProvider';
 
 import { Link, Container, Button } from '@material-ui/core';
@@ -6,13 +6,11 @@ import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 
-
 import ClearIcon from '@material-ui/icons/Clear';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 import './Cart.css';
 import './CartTable.css';
-
 
 export default function CartTable(count) {
   const value = useContext(DataContext);
@@ -22,36 +20,36 @@ export default function CartTable(count) {
   useEffect(() => {
     const getTotal = () => {
       const res = cart.reduce((prev, item) => {
-        return prev + (item.price * item.count);
-      }, 0)
+        return prev + item.price * item.count;
+      }, 0);
       setTotal(res);
-    }
+    };
     getTotal();
   }, [cart]);
 
-  const reduce = id => {
-    cart.forEach(item => {
-      if (item._id === id) {
-        item.count === 1 ? item.count = 1 : item.count -= 1;
+  const reduce = (id) => {
+    cart.forEach((item) => {
+      if (item.id === id) {
+        item.count === 1 ? (item.count = 1) : (item.count -= 1);
       }
-    })
+    });
     setCart([...cart]);
-  }
-  const increase = id => {
-    cart.forEach(item => {
-      if (item._id === id) {
+  };
+  const increase = (id) => {
+    cart.forEach((item) => {
+      if (item.id === id) {
         item.count += 1;
       }
-    })
+    });
     setCart([...cart]);
   };
 
-  const removeProduct = id => {
+  const removeProduct = (id) => {
     cart.forEach((item, index) => {
-      if (item._id === id) {
+      if (item.id === id) {
         cart.splice(index, 1);
       }
-    })
+    });
     setCart([...cart]);
   };
 
@@ -64,21 +62,20 @@ export default function CartTable(count) {
   return (
     <div className="cart-table">
       <Container>
-      <div className="cart-table-content table-responsive">
-        <table>
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th>Product name</th>
-              <th>Unit price</th>
-              <th>Qty</th>
-              <th>SubTotal</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              cart.map((product, index) => (
+        <div className="cart-table-content table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product name</th>
+                <th>Unit price</th>
+                <th>Qty</th>
+                <th>SubTotal</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cart.map((product, index) => (
                 <tr key={index}>
                   <td className="product-thumbnail">
                     <Link href="#">
@@ -90,7 +87,7 @@ export default function CartTable(count) {
                     </Link>
                   </td>
                   <td className="product-name">
-                    <Link href="#">{product.title }</Link>
+                    <Link href="#">{product.title}</Link>
                     <div className="cart-item-variantion">
                       <span>
                         {/* Size: {product.size} */}
@@ -98,72 +95,65 @@ export default function CartTable(count) {
                           options={product.sizes}
                           id="size"
                           debug
-                          style={{width:100, margin: 'auto'}}
-                          renderInput={(params) => <TextField {...params} label="size" margin="normal" />}
+                          style={{ width: 100, margin: 'auto' }}
+                          renderInput={(params) => (
+                            <TextField {...params} label="size" margin="normal" />
+                          )}
                         />
                       </span>
                     </div>
                   </td>
                   <td className="product-price-cart">
-                    <span>${ product.price }.00</span>
+                    <span>${product.price}.00</span>
                   </td>
                   <td className="product-quantity">
                     <div className="cart-plus-minus">
-                      <button
-                        className="dec qtybutton"
-                        onClick={()=> reduce(product._id)}
-                      >
+                      <button className="dec qtybutton" onClick={() => reduce(product.id)}>
                         -
                       </button>
                       <input
                         className="cart-plus-minus-box"
                         type="text"
                         value={product.count}
-                      >
-                      </input>
-                      <button
-                        className="inc qtybutton"
-                        onClick={() => increase(product._id)}
-                      >
+                      ></input>
+                      <button className="inc qtybutton" onClick={() => increase(product.id)}>
                         +
                       </button>
                     </div>
                   </td>
-                      <td className="product-subtotal">${product.count * product.price }.00</td>
+                  <td className="product-subtotal">${product.count * product.price}.00</td>
                   <td className="product-remove">
-                    <IconButton
-                      onClick={()=> removeProduct(product._id)}
-                      aria-label="delete"
-                    >
+                    <IconButton onClick={() => removeProduct(product.id)} aria-label="delete">
                       <ClearIcon />
                     </IconButton>
                   </td>
                 </tr>
-              ))
-            }
-          </tbody>
-        </table>
+              ))}
+            </tbody>
+          </table>
         </div>
       </Container>
       <div className="cart-summary">
-          <Container>
-            <h2 className="cart-summary-title">Cart total</h2>
-            <Grid container spacing={4}>
-              <Grid item lg={4} md={4} sm={6} xs={12}>
-                <h3 className="cart-summary-subtitle">SubTotal</h3>
-                <span>${total }.00</span>
-              </Grid>
-              <Grid item lg={4} md={4} sm={6} xs={12}>
-                <h3 className="cart-summary-shipping">Shipping</h3>
-                <span>Free shipping</span>
-              </Grid>
-              <Grid item lg={4} md={4} sm={6} xs={12}>
-                <h3 className="cart-summary-total">Total: ${total}.00</h3>
-                <Button variant="outlined" color="secondary">Proceed to checkout</Button>
-              </Grid>
+        <Container>
+          <h2 className="cart-summary-title">Cart total</h2>
+          <Grid container spacing={4}>
+            <Grid item lg={4} md={4} sm={6} xs={12}>
+              <h3 className="cart-summary-subtitle">SubTotal</h3>
+              <span>${total}.00</span>
             </Grid>
-          </Container>
-        </div>
+            <Grid item lg={4} md={4} sm={6} xs={12}>
+              <h3 className="cart-summary-shipping">Shipping</h3>
+              <span>Free shipping</span>
+            </Grid>
+            <Grid item lg={4} md={4} sm={6} xs={12}>
+              <h3 className="cart-summary-total">Total: ${total}.00</h3>
+              <Button variant="outlined" color="secondary">
+                Proceed to checkout
+              </Button>
+            </Grid>
+          </Grid>
+        </Container>
+      </div>
     </div>
   );
 }
