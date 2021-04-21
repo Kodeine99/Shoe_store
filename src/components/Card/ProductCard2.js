@@ -9,6 +9,14 @@ import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutli
 import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 
 function ProductCard2(props) {
+  const { onProductCard2 } = props;
+
+  // handle addCart
+  const handleAddCart = (productId) => {
+    props.addCart();
+    onProductCard2(productId);
+  };
+
   return (
     <div className="carousel-product-2" style={{ margin: '0 4px' }}>
       <div className="product product-2 text-center">
@@ -43,7 +51,7 @@ function ProductCard2(props) {
               variant="outlined"
               color="primary"
               startIcon={<AddShoppingCartOutlinedIcon />}
-              onClick={props.addCart}
+              onClick={() => handleAddCart(props.productId)}
             >
               Add to cart
             </Button>

@@ -14,7 +14,7 @@ export const DataProvider = (props) => {
           _limit: 9,
         };
         const response = await productApi.getAll(params);
-        console.log(response);
+        // console.log(response);
         setProducts(response.data);
       } catch (error) {
         console.log('Failed to fetch product list: ', error);
@@ -34,6 +34,7 @@ export const DataProvider = (props) => {
       const data = products.filter((product) => {
         return product.id === id;
       });
+      console.log(data);
       setCart([...cart, ...data]);
     } else {
       alert('Product has been added to cart');

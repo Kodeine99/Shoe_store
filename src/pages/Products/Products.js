@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Products.css';
 import { DataContext } from '../../contexts/DataProvider';
 
@@ -13,7 +13,6 @@ import {
   makeStyles,
 } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import Pagination from '@material-ui/lab/Pagination';
 
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
@@ -21,6 +20,10 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import ProductCard2 from '../../components/Card/ProductCard2';
 import Footer from '../../components/Footer/Footer';
 import SidebarProduct from '../../components/Sidebar/SidebarProduct';
+import PaginationComp from '../../components/Pagination/PaginationComp';
+
+// Api
+import productApi from '../../apis/productApi';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,13 +58,57 @@ const useStyles = makeStyles((theme) => ({
 
 const sortObtions = [{ title: 'Most popular' }, { title: 'Most rated' }, { title: 'Date' }];
 
-function Products() {
+function Products(props) {
+  const { id } = { props };
   const classes = useStyles();
 
   const value = useContext(DataContext);
-  const [products] = value.products;
+  const [products, setProducts] = useState([]);
+  const [cart, setCart] = value.cart;
   const addCart = value.addCart;
 
+  const [pagination, setPagination] = useState({
+    _page: 1,
+    _limit: 9,
+    _totalRows: 12,
+  });
+
+  // params state
+  const [filters, setFilters] = useState({
+    _limit: 9,
+    _page: 1,
+  });
+
+  // handle page change
+  function handlePageChange(event, value) {
+    console.log(value);
+    setFilters({ ...filters, _page: value });
+  }
+
+  // handle on productCard2
+  const handleOnProductCard2 = (productId) => {
+    const data = products.filter((product) => {
+      return product.id === productId;
+    });
+    setCart([...cart, ...data]);
+  };
+
+  useEffect(() => {
+    const fetchProductList = async () => {
+      try {
+        const params = filters;
+        console.log(params);
+        const response = await productApi.getAll(params);
+        console.log(response);
+        setProducts(response.data);
+        setPagination(response.pagination);
+      } catch (error) {
+        console.log('Failed to fetch product list: ', error);
+      }
+    };
+
+    fetchProductList();
+  }, [filters]);
   return (
     <div className="products-page">
       <div className="main">
@@ -97,7 +144,7 @@ function Products() {
                   <div className="tool-box-left">
                     <div className="tool-box-info">
                       Showing
-                      <span> 9 of 15 </span>
+                      <span> 9 of {pagination._totalRows} </span>
                       Products
                     </div>
                   </div>
@@ -130,17 +177,14 @@ function Products() {
                           oldPrice={product.oldPrice}
                           tag1={product.tags[0]}
                           tag2={product.tags[1]}
+                          onProductCard2={handleOnProductCard2}
                         />
                       </Grid>
                     ))}
                   </Grid>
                 </div>
                 <div className="pagination-container">
-                  <Pagination
-                    style={{ display: 'flex', justifyContent: 'center' }}
-                    count={3}
-                    color="primary"
-                  />
+                  <PaginationComp pagination={pagination} onPageChange={handlePageChange} />
                 </div>
               </Grid>
             </Grid>
