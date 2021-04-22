@@ -271,7 +271,7 @@
         "img/products/adidas/product-1-4.jpg"
       ],
       "description": "A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort.",
-      "categoryId": 1,
+      "categoryId": 2,
       "tags":["men"],
       "sizes": [
         "38",
@@ -308,7 +308,7 @@
       "oldPrice": 159,
       "count": 1,
       "filter": "",
-      "categoryId": 1,
+      "categoryId": 2,
       "tags":["men", "women"],
       "createdAt": 1618321764137,
       "updateAt": 1618321828153

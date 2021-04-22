@@ -9,13 +9,9 @@ export const DataProvider = (props) => {
   useEffect(() => {
     const fetchProductList = async () => {
       try {
-        const params = {
-          _page: 1,
-          _limit: 9,
-        };
-        const response = await productApi.getAll(params);
+        const response = await productApi.getAll();
         // console.log(response);
-        setProducts(response.data);
+        setProducts(response);
       } catch (error) {
         console.log('Failed to fetch product list: ', error);
       }

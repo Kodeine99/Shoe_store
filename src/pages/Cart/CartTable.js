@@ -12,7 +12,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import './Cart.css';
 import './CartTable.css';
 
-export default function CartTable(count) {
+export default function CartTable() {
   const value = useContext(DataContext);
   const [cart, setCart] = value.cart;
   const [total, setTotal] = useState(0);

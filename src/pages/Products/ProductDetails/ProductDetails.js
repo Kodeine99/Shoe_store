@@ -9,16 +9,17 @@ import { Button, Container, Grid, Input } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import { TextField } from '@material-ui/core';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutlined';
 
-import ProductSizes from './ProductSizes';
 import ProductImgCol from './ProductImgCol';
 import Footer from '../../../components/Footer/Footer';
 import ProductDetailsTab from './ProductDetailsTab';
@@ -104,14 +105,28 @@ function ProductDetails() {
                       <Typography className="product-details-desc" variant="body1">
                         {product.description}
                       </Typography>
-                      <ProductSizes sizes={product.sizes} />
+                      <div className="product-details-sizes">
+                        {
+                          <Autocomplete
+                            options={product.sizes}
+                            // value={sizes}
+                            // onChange={(e) => setSizes(e.target.value)}
+                            id="size"
+                            debug
+                            style={{ width: 200 }}
+                            renderInput={(params) => (
+                              <TextField {...params} label="size" margin="normal" />
+                            )}
+                          />
+                        }
+                      </div>
                       <div className="product-details-quantity">
                         <label className="product-quantity-label">Quantity:</label>
                         <ButtonGroup>
                           <Button
                             aria-label="reduce"
                             onClick={() => {
-                              setCount(Math.max(count - 1, 0));
+                              setCount(Math.max(count - 1, 1));
                             }}
                           >
                             <RemoveIcon fontSize="small" />

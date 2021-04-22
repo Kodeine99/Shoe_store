@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './Products.css';
 import { DataContext } from '../../contexts/DataProvider';
+import { Link as RouterLink } from 'react-router-dom';
 
 // Material-UI component
 import {
@@ -59,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
 const sortObtions = [{ title: 'Most popular' }, { title: 'Most rated' }, { title: 'Date' }];
 
 function Products(props) {
-  const { id } = { props };
   const classes = useStyles();
 
   const value = useContext(DataContext);
@@ -123,13 +123,12 @@ function Products(props) {
         <div className="breadcrumb-nav">
           <Container className="breadcrumb-container">
             <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
-              <Link to="/" className="breadcumbs-icon" color="inherit">
+              <RouterLink to="/" className="breadcumbs-icon" color="inherit">
                 <Typography color="inherit">Home</Typography>
-              </Link>
-              <Link to="/products" color="inherit">
+              </RouterLink>
+              <RouterLink to="/products" color="inherit">
                 <Typography color="inherit">Products</Typography>
-              </Link>
-              <Typography color="textPrimary">Product</Typography>
+              </RouterLink>
             </Breadcrumbs>
           </Container>
         </div>
