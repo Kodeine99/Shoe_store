@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
   Button,
@@ -17,7 +17,8 @@ import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { MdSettings } from "react-icons/md";
+import { MdSettings } from 'react-icons/md';
+import categoryApi from '../../apis/categoryApi';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,12 +34,12 @@ const useStyles = makeStyles((theme) => ({
     color: '#1cc0a0',
     fontWeight: '400',
     fontSize: '.8rem',
-    marginLeft: 'auto'
+    marginLeft: 'auto',
   },
   heading: {
     fontSize: theme.typography.pxToRem(20),
     fontWeight: theme.typography.fontWeightRegular,
-    color: '#000'
+    color: '#000',
   },
   formControl: {
     margin: theme.spacing(1),
@@ -82,7 +83,7 @@ const AccordionSummary = withStyles({
 const AccordionDetails = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
-    display: 'block'
+    display: 'block',
   },
 }))(MuiAccordionDetails);
 
@@ -101,29 +102,51 @@ const prices = [
   },
   {
     value: 99,
-    label: '$999'
-  }
+    label: '$999',
+  },
 ];
 function valuetext(value) {
   return `$${value}`;
-};
+}
 
-
-function SidebarProduct() {
+function SidebarProduct(props) {
   const classes = useStyles();
 
   const [showSidebar, setShowSidebar] = useState(true);
+  const [categoryList, setCategoryList] = useState([]);
+
+  // fetch categoryList
+  useEffect(() => {
+    const fetchCategoryList = async () => {
+      try {
+        const response = await categoryApi.getAll();
+        console.log(response);
+        setCategoryList(response);
+      } catch (error) {
+        console.log('Failed to fetch categories:', error);
+      }
+    };
+    fetchCategoryList();
+  }, []);
   const changeShow = () => {
     setShowSidebar(!showSidebar);
-  }
+  };
+  const handleOnChange = (id) => {
+    props.onChangeFilters();
+    // console.log(e.target.value);
+    props.onCheckCategory(id);
+  };
   return (
     <>
       <aside
-        className={showSidebar ? "sidebar-shop sidebar-filter" : "sidebar-shop sidebar-filter active"}>
+        className={
+          showSidebar ? 'sidebar-shop sidebar-filter' : 'sidebar-shop sidebar-filter active'
+        }
+      >
         <div className="widget widget-clean">
           <label>Filters:</label>
           <Button variant="link" color="primary" className={classes.link}>
-              Clear All
+            Clear All
           </Button>
         </div>
 
@@ -139,27 +162,16 @@ function SidebarProduct() {
               <Typography className={classes.heading}>Brand</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <FormControl
-                component="brand-set"
-                className={classes.formControl}
-              >
+              <FormControl component="brand-set" className={classes.formControl}>
                 <FormGroup>
-                  <FormControlLabel
-                    control={<Checkbox name="nike" />}
-                    label="Nike"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox name="adidas" />}
-                    label="Adidas"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox name="converse" />}
-                    label="Converse"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox name="puma" />}
-                    label="Puma"
-                  />
+                  {categoryList.map((category) => (
+                    <FormControlLabel
+                      id={category.id}
+                      control={<Checkbox name={category.name} />}
+                      label={category.name}
+                      onChange={() => handleOnChange(category.id)}
+                    />
+                  ))}
                 </FormGroup>
               </FormControl>
             </AccordionDetails>
@@ -172,38 +184,17 @@ function SidebarProduct() {
               aria-controls="sizepanel-content"
               id="sizepanel-header"
             >
-              <Typography  className={classes.heading}>Size</Typography>
+              <Typography className={classes.heading}>Size</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <FormControl
-                component="size-set"
-                className={classes.formControl}
-              >
+              <FormControl component="size-set" className={classes.formControl}>
                 <FormGroup>
-                  <FormControlLabel
-                    control={<Checkbox name="37" />}
-                    label="37"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox name="38" />}
-                    label="38"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox name="39" />}
-                    label="39"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox name="40" />}
-                    label="40"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox name="41" />}
-                    label="41"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox name="42" />}
-                    label="42"
-                  />
+                  <FormControlLabel control={<Checkbox name="37" />} label="37" />
+                  <FormControlLabel control={<Checkbox name="38" />} label="38" />
+                  <FormControlLabel control={<Checkbox name="39" />} label="39" />
+                  <FormControlLabel control={<Checkbox name="40" />} label="40" />
+                  <FormControlLabel control={<Checkbox name="41" />} label="41" />
+                  <FormControlLabel control={<Checkbox name="42" />} label="42" />
                 </FormGroup>
               </FormControl>
             </AccordionDetails>
@@ -235,16 +226,15 @@ function SidebarProduct() {
         </div>
       </aside>
       <button
-        className={showSidebar ? "sidebar-fixed-toggler" : "sidebar-fixed-toggler active"}
-        onClick={() => changeShow()}>
+        className={showSidebar ? 'sidebar-fixed-toggler' : 'sidebar-fixed-toggler active'}
+        onClick={() => changeShow()}
+      >
         <MdSettings />
       </button>
       <div
-          className={showSidebar ? "back-drop" : "back-drop active"}
-          onClick={() => changeShow()}
-      >
-
-      </div>
+        className={showSidebar ? 'back-drop' : 'back-drop active'}
+        onClick={() => changeShow()}
+      ></div>
     </>
   );
 }

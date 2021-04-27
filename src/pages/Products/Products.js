@@ -4,15 +4,7 @@ import { DataContext } from '../../contexts/DataProvider';
 import { Link as RouterLink } from 'react-router-dom';
 
 // Material-UI component
-import {
-  Container,
-  Typography,
-  Breadcrumbs,
-  Link,
-  Grid,
-  TextField,
-  makeStyles,
-} from '@material-ui/core';
+import { Container, Typography, Breadcrumbs, Grid, TextField, makeStyles } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -66,7 +58,9 @@ function Products(props) {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = value.cart;
   const addCart = value.addCart;
+  const [categoryArr] = useState([]);
 
+  // pagination state
   const [pagination, setPagination] = useState({
     _page: 1,
     _limit: 9,
@@ -91,6 +85,24 @@ function Products(props) {
       return product.id === productId;
     });
     setCart([...cart, ...data]);
+  };
+
+  // Products filter with checkbox
+  const handleOnChangeFilters = () => {
+    setFilters({ ...filters, categoryId: categoryArr });
+  };
+
+  // check category arr
+  const handleOnCheckCategory = (id) => {
+    // let numValue = Number(value);
+    let currentId = categoryArr.indexOf(id);
+    console.log('value', typeof id);
+    if (currentId === -1) {
+      categoryArr.push(id);
+    } else {
+      categoryArr.splice(currentId, 1);
+    }
+    console.log(categoryArr);
   };
 
   useEffect(() => {
@@ -136,7 +148,10 @@ function Products(props) {
           <Container>
             <Grid container spacing={2} justify="flex-start" direction="row">
               <Grid item lg={4} md={4} sm={12} xs={12} className={classes.productSidebar_md}>
-                <SidebarProduct />
+                <SidebarProduct
+                  onChangeFilters={handleOnChangeFilters}
+                  onCheckCategory={handleOnCheckCategory}
+                />
               </Grid>
               <Grid item lg={8} md={8} sm={12} xs={12}>
                 <div className="tool-box">

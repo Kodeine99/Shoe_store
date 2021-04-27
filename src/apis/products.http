@@ -14,6 +14,11 @@ GET {{baseUrl}}/products?categoryId=2
 
 ###
 
+# @name filterByCategoryId with pagination
+GET {{baseUrl}}/products?_page=1&_limit=9&categoryId=1&categoryId=2
+
+###
+
 # @name pagination
 GET {{baseUrl}}/products?_page=1&_limit=2
 
