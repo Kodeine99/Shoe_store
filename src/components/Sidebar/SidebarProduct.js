@@ -114,6 +114,8 @@ function SidebarProduct(props) {
 
   const [showSidebar, setShowSidebar] = useState(true);
   const [categoryList, setCategoryList] = useState([]);
+  const sizes = [38, 39, 40, 41, 42];
+  const tags = ['men', 'women'];
 
   // fetch categoryList
   useEffect(() => {
@@ -133,7 +135,6 @@ function SidebarProduct(props) {
   };
   const handleOnChange = (id) => {
     props.onChangeFilters();
-    // console.log(e.target.value);
     props.onCheckCategory(id);
   };
   return (
@@ -189,12 +190,29 @@ function SidebarProduct(props) {
             <AccordionDetails>
               <FormControl component="size-set" className={classes.formControl}>
                 <FormGroup>
-                  <FormControlLabel control={<Checkbox name="37" />} label="37" />
-                  <FormControlLabel control={<Checkbox name="38" />} label="38" />
-                  <FormControlLabel control={<Checkbox name="39" />} label="39" />
-                  <FormControlLabel control={<Checkbox name="40" />} label="40" />
-                  <FormControlLabel control={<Checkbox name="41" />} label="41" />
-                  <FormControlLabel control={<Checkbox name="42" />} label="42" />
+                  {sizes.map((size, index) => (
+                    <FormControlLabel id={index} control={<Checkbox name={size} />} label={size} />
+                  ))}
+                </FormGroup>
+              </FormControl>
+            </AccordionDetails>
+          </Accordion>
+
+          {/* Tags filters */}
+          <Accordion defaultExpanded={true}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="sizepanel-content"
+              id="sizepanel-header"
+            >
+              <Typography className={classes.heading}>Tags</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <FormControl component="tag-set" className={classes.formControl}>
+                <FormGroup>
+                  {tags.map((tag, index) => (
+                    <FormControlLabel id={index} control={<Checkbox name={tag} />} label={tag} />
+                  ))}
                 </FormGroup>
               </FormControl>
             </AccordionDetails>
